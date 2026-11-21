@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight, ExternalLink, Mail } from "lucide-react";
 import { useLang } from "@/components/Providers";
 import { Card, Chip, SampleBadge } from "@/components/ui";
 import type { Lab } from "@/lib/types";
-import { LabFacts, RecruitingBadge } from "./LabCard";
+import { LabFacts, LabPI, RecruitingBadge, RecruitingSource, ScholarBadge } from "./LabCard";
 import { LabBrowser } from "./LabBrowser";
 
 export function LabDetail({ lab }: { lab: Lab }) {
@@ -21,13 +21,14 @@ export function LabDetail({ lab }: { lab: Lab }) {
           <div className="mb-2 flex flex-wrap items-center gap-2">
             <RecruitingBadge status={lab.recruiting.status} />
             {lab.isSample && <SampleBadge />}
+            {lab.source === "dgist-scholar" && <ScholarBadge />}
             {lab.style && <Chip>{lab.style}</Chip>}
             <span className="text-xs text-slate-400">
               {L("Last updated", "업데이트")} {lab.lastUpdated}
             </span>
           </div>
           <h1 className="text-2xl font-bold md:text-3xl">{lab.name}</h1>
-          <p className="mb-5 text-slate-500">{lab.professor ?? L("Professor not listed", "교수 정보 없음")}</p>
+          <LabPI lab={lab} className="mb-5 text-base" />
           <p className="mb-4 max-w-3xl text-lg leading-relaxed">{lang === "ko" && lab.plainSummaryKo ? lab.plainSummaryKo : lab.plainSummary}</p>
           <div className="mb-6 flex flex-wrap gap-1.5">
             {lab.researchAreas.map((a) => (
@@ -36,10 +37,17 @@ export function LabDetail({ lab }: { lab: Lab }) {
               </Chip>
             ))}
           </div>
+          {lab.fields && lab.fields.length > 0 && (
+            <div className="mb-6 text-sm">
+              <span className="mr-1.5 font-semibold text-slate-500">{L("Research fields:", "연구분야:")}</span>
+              <span className="text-slate-600">{lab.fields.join(" · ")}</span>
+            </div>
+          )}
           <div className="mb-6 rounded-xl bg-slate-50 p-4 text-sm">
             <span className="font-semibold">{L("Recruiting:", "모집:")}</span>{" "}
             {lab.recruiting.types.length ? lab.recruiting.types.join(" · ") : L("No info", "정보 없음")}
             {lab.recruiting.note && <span className="text-slate-500"> — {lab.recruiting.note}</span>}
+            <RecruitingSource lab={lab} className="mt-1.5" />
           </div>
           <LabFacts lab={lab} />
           <div className="mt-6 flex flex-wrap gap-2">
@@ -65,6 +73,29 @@ export function LabDetail({ lab }: { lab: Lab }) {
                 <ExternalLink className="h-4 w-4" /> {L("Lab website", "연구실 홈페이지")}
               </a>
             )}
+            {lab.scholarUrl && (
+              <a
+                href={lab.scholarUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-slate-100"
+              >
+                <ExternalLink className="h-4 w-4" /> {L("DGIST Scholar profile", "DGIST Scholar 프로필")}
+              </a>
+            )}
+            {(lab.links ?? [])
+              .filter((l) => l.url !== lab.website && /scholar\.google|orcid/i.test(l.url))
+              .map((l) => (
+                <a
+                  key={l.url}
+                  href={l.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 rounded-xl px-3 py-2.5 text-sm font-semibold text-slate-500 hover:bg-slate-100"
+                >
+                  <ExternalLink className="h-4 w-4" /> {l.label}
+                </a>
+              ))}
           </div>
         </Card>
       </div>

@@ -49,6 +49,22 @@ export interface Lab {
   lastUpdated: string;
   /** Optional: helps the Computational / Experimental filter. */
   style?: "Computational" | "Experimental" | "Both";
+  /** Where the record came from. Missing = sample or homepage crawler. */
+  source?: "dgist-scholar" | "crawler";
+  /** DGIST department / division (from DGIST Scholar). */
+  department?: string;
+  /** Korean name of the PI, e.g. "강원석". */
+  professorKo?: string;
+  /** Public DGIST Scholar profile page. */
+  scholarUrl?: string;
+  /** National research-field categories (국가과학기술표준분류, 12대 국가전략기술 …). */
+  fields?: string[];
+  /** Other public profile links (lab website, Google Scholar, ORCiD …). */
+  links?: { label: string; url: string }[];
+  /** Where `recruiting` came from (e.g. 김박사넷 open-lab card the PI filled in). */
+  recruitingSource?: { name: string; url: string; checkedAt: string };
+  /** The professor's 김박사넷 (phdkim.net) page. */
+  phdkimUrl?: string;
 }
 
 export interface Opportunity {

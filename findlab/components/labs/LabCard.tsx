@@ -52,6 +52,57 @@ export function RecruitingBadge({ status }: { status: Lab["recruiting"]["status"
   );
 }
 
+/** Marks labs imported from the public DGIST Scholar researcher directory. */
+export function ScholarBadge() {
+  return (
+    <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-semibold text-slate-600" title="scholar.dgist.ac.kr">
+      DGIST Scholar
+    </span>
+  );
+}
+
+/**
+ * Where the recruiting status comes from, with a link to check it yourself.
+ * Labs not on 김박사넷 open lab get a link to search there (not listed ≠ not recruiting).
+ */
+export function RecruitingSource({ lab, className }: { lab: Lab; className?: string }) {
+  const { lang } = useLang();
+  const L = (en: string, ko: string) => (lang === "ko" ? ko : en);
+  const src = lab.recruitingSource;
+  if (src)
+    return (
+      <p className={clsx("text-xs text-slate-500", className)}>
+        {L("Source:", "출처:")}{" "}
+        <a href={src.url} target="_blank" rel="noreferrer" className="font-semibold text-lab hover:underline">
+          {src.name} {L("open lab", "오픈랩")} ↗
+        </a>{" "}
+        · {L("checked", "확인")} {src.checkedAt}
+      </p>
+    );
+  if (lab.source !== "dgist-scholar") return null;
+  return (
+    <p className={clsx("text-xs text-slate-500", className)}>
+      {L("Not listed on 김박사넷 open lab — ask the lab directly.", "김박사넷 오픈랩에 모집 정보가 없어요. 연구실에 직접 물어보세요.")}{" "}
+      {lab.phdkimUrl && (
+        <a href={lab.phdkimUrl} target="_blank" rel="noreferrer" className="font-semibold text-lab hover:underline">
+          {L("김박사넷 profile", "김박사넷 프로필")} ↗
+        </a>
+      )}
+    </p>
+  );
+}
+
+/** Professor name + department line used on cards and the detail page. */
+export function LabPI({ lab, className }: { lab: Lab; className?: string }) {
+  const { lang } = useLang();
+  return (
+    <p className={clsx("text-sm text-slate-500", className)}>
+      {lab.professor ?? (lang === "ko" ? "교수 정보 없음" : "Professor not listed")}
+      {lab.department && <span className="block text-xs text-slate-400">{lab.department}</span>}
+    </p>
+  );
+}
+
 function Section({ icon: Icon, title, children }: { icon: React.ElementType; title: string; children: React.ReactNode }) {
   return (
     <div>
@@ -120,9 +171,10 @@ export function LabCard({ match, rank }: { match: MatchWithLab; rank: number }) 
             <span className="rounded-full bg-lab-tint px-2 py-0.5 text-[11px] font-bold text-lab">#{rank}</span>
             <RecruitingBadge status={lab.recruiting.status} />
             {lab.isSample && <SampleBadge />}
+            {lab.source === "dgist-scholar" && <ScholarBadge />}
           </div>
           <h3 className="text-lg font-bold leading-tight">{lab.name}</h3>
-          <p className="text-sm text-slate-500">{lab.professor ?? L("Professor not listed", "교수 정보 없음")}</p>
+          <LabPI lab={lab} />
         </div>
       </div>
 
@@ -167,6 +219,7 @@ export function LabCard({ match, rank }: { match: MatchWithLab; rank: number }) 
         </div>
 
         {lab.recruiting.note && <p className="text-xs text-slate-500">ℹ️ {lab.recruiting.note}</p>}
+        <RecruitingSource lab={lab} className="-mt-2" />
 
         <LabFacts lab={lab} stacked />
 
@@ -214,6 +267,16 @@ export function LabCard({ match, rank }: { match: MatchWithLab; rank: number }) 
               className={clsx("inline-flex items-center gap-1 rounded-xl px-3 py-2.5 text-sm font-semibold text-slate-500 hover:bg-slate-100")}
             >
               <ExternalLink className="h-4 w-4" /> Web
+            </a>
+          )}
+          {lab.scholarUrl && (
+            <a
+              href={lab.scholarUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 rounded-xl px-3 py-2.5 text-sm font-semibold text-slate-500 hover:bg-slate-100"
+            >
+              <ExternalLink className="h-4 w-4" /> Scholar
             </a>
           )}
         </div>

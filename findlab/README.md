@@ -35,8 +35,36 @@ npm run crawl              # crawl lab homepages in data/lab_urls.txt → data/l
 npm run crawl -- --replace # same, but drops the 6 sample labs
 npm run crawl -- --dry     # fetch + extract only (no AI, nothing written) — check your URLs
 npm run seed               # reset the demo user "minji" (12 entries, profile, 1 overdue mail)
+npm run import:scholar     # import all DGIST researchers from DGIST Scholar → data/labs.json (no API key needed)
+npm run import:phdkim      # add recruiting status ("can I apply?") from 김박사넷 open lab → data/labs.json
 npm run build              # production build
 ```
+
+### Real DGIST labs (DGIST Scholar)
+
+`npm run import:scholar` reads the public researcher directory at
+[scholar.dgist.ac.kr/browse-researcher](https://scholar.dgist.ac.kr/browse-researcher) (263 researchers) and writes
+one lab per researcher into `data/labs.json`, marked `source: "dgist-scholar"`:
+
+- name (KO/EN), department, research interests, email, lab website / Google Scholar / ORCiD links
+- up to 5 recent journal papers (with DGIST Scholar links) — used by the email draft
+- the DGIST Scholar keyword cloud + national research-field categories — used by keyword preselect
+- a plain summary built from the interests (no AI); recruiting status starts as **Unknown**
+
+Re-running it replaces only the DGIST Scholar labs; sample labs and crawled labs are kept, and so is the
+recruiting info below (`-- --replace` also drops the 6 sample labs, `-- --limit 10` for a quick test, `-- --dry` to write nothing).
+
+### "Can I apply?" — recruiting status (김박사넷)
+
+`npm run import:phdkim` reads the public [김박사넷 open-lab list](https://phdkim.net/professor/open-lab), where PIs
+mark themselves "지금 연구실 모집중이에요!" with the positions (대학원생 / 박사후연구원 / 학부생인턴), and the
+DGIST professor directory on 김박사넷. For each DGIST Scholar lab it stores only facts: `recruiting` (status, positions,
+date checked), `recruitingSource` (link to the open-lab card) and `phdkimUrl` (profile link). No posts or reviews are copied.
+
+- Matched by Korean name; when two researchers share a name, department and open-lab keywords decide.
+- Labs **not** on 김박사넷 open lab stay **Unknown** (not listed ≠ not recruiting) and show a link to check.
+- The browse page has a "지금 신청 가능한 연구실만" filter; matching gives recruiting labs a small tie-break bonus.
+- Re-run before the demo — open-lab cards change. Run it after `import:scholar` on a fresh checkout.
 
 ### Demo mode (offline-safe)
 
@@ -71,7 +99,7 @@ Hidden helpers: **Settings → `···`** → "Trigger alarm now" (daily reminde
 | PDF CV text extraction | **Real** (`pdf-parse`, in memory only, never stored) |
 | Voice input | **Real** (browser Web Speech API, `ko-KR` / `en-US`; best in Chrome) |
 | Lab crawler | **Real** (`npm run crawl`; needs an API key) |
-| Labs | **Sample** — 6 fictional labs (`isSample: true`) until you crawl real ones |
+| Labs | **Real** — 263 DGIST researchers from DGIST Scholar (`npm run import:scholar`) + 6 fictional sample labs (`isSample: true`) for the offline demo |
 | Courses & LMS | **Mocked** — `data/sample/courses.json`, `lms.json` |
 | Opportunities / deadlines (UGRP, DURA, FGLP, winter intern) | **Mocked** — `data/sample/opportunities.json` |
 | Sending email | **Never automatic** — `mailto:` link + copy; you send from your own DGIST mail |

@@ -35,9 +35,23 @@ function relevantEntries(lab: Lab, entries: DiaryEntry[], n = 2): DiaryEntry[] {
 const lowerFirst = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
 const strip = (s: string) => s.replace(/[.。]\s*$/, "");
 
+/** DGIST Scholar contacts look like "강원석 (Prof. Won-Seok Kang)": split them into the Korean and English names. */
+function splitName(name: string): { ko: string; en: string } {
+  const m = name.match(/^(.+?)\s*\((?:Prof(?:essor)?\.?|Dr\.?)\s+(.+)\)$/);
+  if (m) return { ko: m[1], en: m[2] };
+  const bare = name.replace(/^(Prof(essor)?|Dr)\.?\s+/i, "");
+  return { ko: bare, en: bare };
+}
+
 function koName(name: string, role: string) {
-  const bare = name.replace(/^Prof(essor)?\.?\s+/i, "");
-  return role === "Professor" ? `${bare} 교수님` : `${bare}님`;
+  const { ko } = splitName(name);
+  return role === "Professor" ? `${ko} 교수님` : `${ko}님`;
+}
+
+function enName(name: string, role: string) {
+  const { en } = splitName(name);
+  if (role === "Professor") return `Professor ${en}`;
+  return /\(Dr\.?\s/.test(name) ? `Dr. ${en}` : en;
 }
 
 function templateMail(opts: {
@@ -56,7 +70,7 @@ function templateMail(opts: {
     studentYearKo: profile.year.includes("2nd") ? "2학년" : profile.year,
     studentEmail: profile.email,
     interests: lang === "ko" && profile.interestsKo?.length ? profile.interestsKo.join(", ") : profile.interests.join(", "),
-    contactName: lang === "ko" ? koName(opts.contactName, opts.contactRole) : opts.contactRole === "Professor" ? `Professor ${opts.contactName.replace(/^Prof(essor)?\.?\s+/i, "")}` : opts.contactName,
+    contactName: lang === "ko" ? koName(opts.contactName, opts.contactRole) : enName(opts.contactName, opts.contactRole),
     area: lang === "ko" ? lab.researchAreas.slice(0, 2).join("·") : lab.researchAreas.slice(0, 2).join(" and ").toLowerCase(),
     paperClause: paper ? (lang === "ko" ? `(특히 "${paper}")` : ` (especially "${paper}")`) : "",
     link1: pre ? pre[0] : e1 ? (lang === "ko" ? `첫째, 저는 "${b(e1)}" 경험이 있습니다.` : `First, I ${lowerFirst(b(e1))}.`) : "",

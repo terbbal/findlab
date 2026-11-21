@@ -39,7 +39,9 @@ const labForAI = (l: Lab) => ({
   id: l.id,
   name: l.name,
   professor: l.professor,
+  department: l.department ?? null,
   researchAreas: l.researchAreas,
+  fields: l.fields ?? [],
   plainSummary: l.plainSummary,
   recentPapers: l.recentPapers.map((p) => p.title),
   recruiting: l.recruiting,
@@ -99,7 +101,8 @@ export async function POST(req: Request) {
   if (body.mode === "profile") profileText = buildProfileText(profile, entries);
   else {
     if (!body.text || body.text.trim().length < 2) return jsonError("Please tell us a bit more first.");
-    profileText = body.mode === "cv" ? `CV text:\n${body.text}` : `Interests (free text): ${body.text}`;
+    // Keep these labels free of topic words: keyword preselect scans the whole string (a "text" label matched text-mining labs).
+    profileText = body.mode === "cv" ? `CV:\n${body.text}` : `Interests: ${body.text}`;
   }
 
   const labs = applyFilters(allLabs, body.filters);

@@ -8,7 +8,9 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "crawl": "tsx scripts/crawl_labs.ts",
-    "seed": "node scripts/seed.mjs"
+    "seed": "node scripts/seed.mjs",
+    "import:scholar": "node scripts/import_dgist_scholar.mjs",
+    "import:phdkim": "node scripts/import_phdkim.mjs"
   },
   "repository": {
     "type": "git",
