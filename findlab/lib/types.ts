@@ -15,6 +15,19 @@ export interface DiaryEntry {
   highlight?: boolean;
 }
 
+/** Something the student plans to do ("다음주 월요일에 수학 시험") — kept apart from diary records, shown on the calendar. */
+export interface SchedulePlan {
+  id: string;
+  date: string; // YYYY-MM-DD
+  title: string;
+  /** The note as typed */
+  rawNote: string;
+  /** Only the week/month was given ("다음주에 …"); `date` is its first day */
+  approx?: "week" | "month";
+  done?: boolean;
+  createdAt: string;
+}
+
 export interface Profile {
   userId: string;
   name: string;

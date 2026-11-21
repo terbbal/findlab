@@ -7,14 +7,14 @@
  */
 import { useCallback, useEffect, useState } from "react";
 import demo from "@/data/sample/demo_user.json";
-import type { DiaryEntry, LmsItem, Profile, Roadmap } from "./types";
+import type { DiaryEntry, LmsItem, Profile, Roadmap, SchedulePlan } from "./types";
 import type { PlanSettings } from "./courseplan";
 
 /** Course plan settings: interested labs + where the student is now + courses already taken. */
 export type CoursePlanState = PlanSettings & { labIds: string[] };
 
 export type Workspace = "me" | "demo";
-type DB = { profile: Profile; entries: DiaryEntry[]; savedLabs: string[]; roadmaps: Roadmap[]; lms: LmsItem[]; lmsSyncedAt?: string; coursePlan?: CoursePlanState };
+type DB = { profile: Profile; entries: DiaryEntry[]; savedLabs: string[]; roadmaps: Roadmap[]; lms: LmsItem[]; lmsSyncedAt?: string; coursePlan?: CoursePlanState; plans?: SchedulePlan[] };
 
 const EVENT = "findlab:db-changed";
 const WS_KEY = "findlab.workspace";
@@ -156,6 +156,22 @@ export function deleteEntry(id: string) {
 
 export function saveProfile(patch: Partial<Profile>) {
   writeDB((d) => ({ ...d, profile: { ...d.profile, ...patch } }));
+}
+
+/* ---------- Schedule (plans) ---------- */
+
+export function addPlan(p: Omit<SchedulePlan, "id" | "createdAt">): SchedulePlan {
+  const plan: SchedulePlan = { ...p, id: `plan-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`, createdAt: new Date().toISOString() };
+  writeDB((d) => ({ ...d, plans: [...(d.plans ?? []), plan].sort((a, b) => a.date.localeCompare(b.date)) }));
+  return plan;
+}
+
+export function updatePlan(id: string, patch: Partial<SchedulePlan>) {
+  writeDB((d) => ({ ...d, plans: (d.plans ?? []).map((p) => (p.id === id ? { ...p, ...patch } : p)).sort((a, b) => a.date.localeCompare(b.date)) }));
+}
+
+export function deletePlan(id: string) {
+  writeDB((d) => ({ ...d, plans: (d.plans ?? []).filter((p) => p.id !== id) }));
 }
 
 /* ---------- Saved labs ---------- */
