@@ -3,14 +3,15 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
-import { CheckCircle2, Circle, CircleDot, ExternalLink, Laptop, Link2, Route, Search, Trash2 } from "lucide-react";
+import { CheckCircle2, Circle, CircleDot, ExternalLink, GraduationCap, Laptop, Link2, ListChecks, Plus, Route, Search, Trash2 } from "lucide-react";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { useLang, useToast } from "@/components/Providers";
 import { Button, Card, Skeleton } from "@/components/ui";
 import { LabPhoto } from "@/components/labs/LabPhoto";
 import { AIBadge } from "@/components/labs/AIBadge";
 import { api } from "@/lib/client";
-import { deleteRoadmap, saveRoadmap, useDB } from "@/lib/localdb";
+import { DEFAULT_COURSE_PLAN, deleteRoadmap, readDB, saveCoursePlan, saveRoadmap, useDB } from "@/lib/localdb";
+import { CoursePlanView } from "@/components/roadmap/CoursePlan";
 import { readiness } from "@/lib/readiness";
 import type { Lab, LabIndexItem, Roadmap, RoadmapItem } from "@/lib/types";
 
@@ -25,10 +26,24 @@ export function RoadmapPage() {
   const [labId, setLabId] = useState<string | null>(null);
   const [lab, setLab] = useState<Lab | null>(null);
   const [q, setQ] = useState("");
+  const [tab, setTab] = useState<"courses" | "skills">("courses");
+  const planLabs = db?.coursePlan?.labIds ?? [];
+  /** Clicking a lab on the left: in the course-plan tab it is added to the plan (multi-select). */
+  const pickLab = (id: string) => {
+    setLabId(id);
+    if (tab === "courses") {
+      const cur = readDB().coursePlan?.labIds ?? DEFAULT_COURSE_PLAN.labIds;
+      if (!cur.includes(id)) saveCoursePlan({ labIds: [...cur, id] });
+    }
+  };
 
   useEffect(() => {
     const p = new URLSearchParams(window.location.search).get("lab");
-    if (p) setLabId(p);
+    if (p) {
+      setLabId(p);
+      const cur = readDB().coursePlan?.labIds ?? [];
+      if (!cur.includes(p)) saveCoursePlan({ labIds: [...cur, p] });
+    }
     api<{ labs: LabIndexItem[] }>("/api/labs").then((d) => setIndex(d.labs));
   }, []);
   useEffect(() => {
@@ -82,6 +97,23 @@ export function RoadmapPage() {
     <div>
       <PageHeader step="mail" title={L("Your skill roadmap to a lab", "연구실까지의 스킬 로드맵")} />
 
+      <div className="mb-5 inline-flex rounded-xl bg-white p-1 shadow-soft">
+        {(
+          [
+            { id: "courses", icon: GraduationCap, label: L("Course plan", "수강 계획") },
+            { id: "skills", icon: ListChecks, label: L("Skill checklist", "스킬 체크리스트") },
+          ] as const
+        ).map((t) => (
+          <button
+            key={t.id}
+            onClick={() => setTab(t.id)}
+            className={clsx("flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-semibold transition", tab === t.id ? "bg-mail text-white" : "text-slate-500 hover:text-navy")}
+          >
+            <t.icon className="h-4 w-4" /> {t.label}
+          </button>
+        ))}
+      </div>
+
       <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
         <div className="space-y-4">
           <Card>
@@ -96,7 +128,7 @@ export function RoadmapPage() {
                   <li key={l.id}>
                     <button
                       onClick={() => {
-                        setLabId(l.id);
+                        pickLab(l.id);
                         setQ("");
                       }}
                       className="flex w-full items-center gap-2 rounded-lg p-1.5 text-left hover:bg-slate-50"
@@ -111,18 +143,26 @@ export function RoadmapPage() {
                 ))}
               </ul>
             )}
-            {(savedLabs.length > 0 || (db?.roadmaps.length ?? 0) > 0) && (
+            {(savedLabs.length > 0 || (db?.roadmaps.length ?? 0) > 0 || planLabs.length > 0) && (
               <div className="mt-4 space-y-1">
                 <div className="text-xs font-bold uppercase tracking-wide text-slate-400">{L("Your roadmaps & saved labs", "내 로드맵 & 저장한 연구실")}</div>
-                {Array.from(new Set([...(db?.roadmaps.map((r) => r.labId) ?? []), ...savedLabs.map((l) => l.id)])).map((id) => {
+                {Array.from(new Set([...planLabs, ...(db?.roadmaps.map((r) => r.labId) ?? []), ...savedLabs.map((l) => l.id)])).map((id) => {
                   const l = index.find((x) => x.id === id);
                   if (!l) return null;
                   const has = db?.roadmaps.some((r) => r.labId === id);
                   return (
-                    <button key={id} onClick={() => setLabId(id)} className={clsx("flex w-full items-center gap-2 rounded-lg p-1.5 text-left text-sm", id === labId ? "bg-mail-tint" : "hover:bg-slate-50")}>
+                    <button
+                      key={id}
+                      onClick={() => pickLab(id)}
+                      className={clsx("flex w-full items-center gap-2 rounded-lg p-1.5 text-left text-sm", (tab === "courses" ? planLabs.includes(id) : id === labId) ? "bg-mail-tint" : "hover:bg-slate-50")}
+                    >
                       <LabPhoto src={l.photoUrl} alt="" size={28} />
                       <span className="flex-1 truncate">{(lang === "ko" ? l.nameKo || l.nameEn : l.nameEn || l.nameKo) ?? "—"}</span>
-                      {has && <Route className="h-3.5 w-3.5 text-mail" />}
+                      {tab === "courses" ? (
+                        planLabs.includes(id) ? <CheckCircle2 className="h-3.5 w-3.5 text-mail" /> : <Plus className="h-3.5 w-3.5 text-slate-400" />
+                      ) : (
+                        has && <Route className="h-3.5 w-3.5 text-mail" />
+                      )}
                     </button>
                   );
                 })}
@@ -135,7 +175,9 @@ export function RoadmapPage() {
         </div>
 
         <div className="min-w-0">
-          {!labId ? (
+          {tab === "courses" ? (
+            <CoursePlanView index={index} />
+          ) : !labId ? (
             <Card className="grid min-h-[300px] place-items-center text-center text-slate-500">
               <div>
                 <Route className="mx-auto mb-2 h-8 w-8 text-mail/60" />

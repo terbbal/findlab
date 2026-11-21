@@ -8,9 +8,13 @@
 import { useCallback, useEffect, useState } from "react";
 import demo from "@/data/sample/demo_user.json";
 import type { DiaryEntry, LmsItem, Profile, Roadmap } from "./types";
+import type { PlanSettings } from "./courseplan";
+
+/** Course plan settings: interested labs + where the student is now + courses already taken. */
+export type CoursePlanState = PlanSettings & { labIds: string[] };
 
 export type Workspace = "me" | "demo";
-type DB = { profile: Profile; entries: DiaryEntry[]; savedLabs: string[]; roadmaps: Roadmap[]; lms: LmsItem[]; lmsSyncedAt?: string };
+type DB = { profile: Profile; entries: DiaryEntry[]; savedLabs: string[]; roadmaps: Roadmap[]; lms: LmsItem[]; lmsSyncedAt?: string; coursePlan?: CoursePlanState };
 
 const EVENT = "findlab:db-changed";
 const WS_KEY = "findlab.workspace";
@@ -174,4 +178,12 @@ export function deleteRoadmap(labId: string) {
 
 export function setLms(items: LmsItem[]) {
   writeDB((d) => ({ ...d, lms: items, lmsSyncedAt: new Date().toISOString() }));
+}
+
+/* ---------- Course plan ---------- */
+
+export const DEFAULT_COURSE_PLAN: CoursePlanState = { labIds: [], grade: 2, semester: 1, completed: [], maxCredits: 18 };
+
+export function saveCoursePlan(patch: Partial<CoursePlanState>) {
+  writeDB((d) => ({ ...d, coursePlan: { ...DEFAULT_COURSE_PLAN, ...d.coursePlan, ...patch } }));
 }

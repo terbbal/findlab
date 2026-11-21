@@ -103,6 +103,32 @@ export interface LmsItem {
   url: string | null;
 }
 
+/** A DGIST undergraduate course (snapshot of the public course lookup, data/dgist_courses.json). */
+export interface Course {
+  code: string; // e.g. "CSE302"
+  name: string;
+  nameKo: string | null;
+  credits: number;
+  /** Semesters it was offered in 2025–2026 */
+  semester: ("봄" | "가을")[];
+  department: string;
+  /** Course codes that must be taken first (empty when the source has no data) */
+  prerequisites: string[];
+  /** Same course under another code (e.g. CSE204 ≡ BE201); taking one counts for both */
+  equivalents: string[];
+  offeredTerms: string[];
+  category: string;
+}
+
+/** A skill (same names as Lab.inferredSkills) linked to the DGIST courses that teach it — many-to-many via course codes. */
+export interface Skill {
+  name: string;
+  /** Course codes; [] = no DGIST course → learn outside DGIST */
+  courses: string[];
+  /** One-line reason for each link, keyed by course code */
+  reasons: Record<string, string>;
+}
+
 export interface RoadmapItem {
   id: string;
   skill: string;

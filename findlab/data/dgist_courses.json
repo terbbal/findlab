@@ -1,0 +1,4361 @@
+{
+ "meta": {
+  "source": "https://welcome.dgist.ac.kr/ucs/ucsqProfRespSbjtInq/index.do",
+  "organization": "University (undergraduate)",
+  "terms": [
+   "2025 Spring",
+   "2025 Fall",
+   "2026 Spring",
+   "2026 Fall"
+  ],
+  "snapshot": "2026-11-21",
+  "note": "One-time snapshot of DGIST's public course lookup. The source has no prerequisite field, so prerequisites are empty unless filled in by hand. 'department' is derived from the course-code prefix."
+ },
+ "courses": [
+  {
+   "code": "BE101a",
+   "name": "Introduction to Programming",
+   "nameKo": "프로그래밍",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Basic Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BE201",
+   "name": "Artificial Intelligence Basics",
+   "nameKo": "인공지능기초",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Basic Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BE202",
+   "name": "Introduction to Data Science",
+   "nameKo": "데이터사이언스기초",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Basic Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BE203",
+   "name": "Creative mechanical design",
+   "nameKo": "창의기계설계",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Basic Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BE204",
+   "name": "Introduction to Chemical Engineering",
+   "nameKo": "화학공학개론",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Basic Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BE205",
+   "name": "Circuit Theory and Measurement (Lecture)",
+   "nameKo": "회로이론과 계측법(이론)",
+   "credits": 2,
+   "semester": [
+    "봄"
+   ],
+   "department": "Basic Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BE206",
+   "name": "Circuit Theory and Measurement (Lab)",
+   "nameKo": "회로이론과 계측법(실습)",
+   "credits": 1,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Basic Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BR201",
+   "name": "Neuroscience Ⅰ",
+   "nameKo": "신경과학Ⅰ(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [
+    "LS305"
+   ],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "BR202",
+   "name": "Neuroscience Ⅱ",
+   "nameKo": "신경과학Ⅱ(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [
+    "LS306"
+   ],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "BR301",
+   "name": "Brain Science LabⅠ",
+   "nameKo": "뇌과학실험Ⅰ(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "BR302",
+   "name": "Introduction to brain engineering",
+   "nameKo": "뇌공학개론(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "BR303",
+   "name": "Brain Science Lab Ⅱ",
+   "nameKo": "뇌과학실험Ⅱ(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "BR306",
+   "name": "Introduction to cognitive brain science",
+   "nameKo": "인지뇌과학개론(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [
+    "BR401"
+   ],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "BR307",
+   "name": "Topics in Brain Sciences",
+   "nameKo": "뇌과학 특강(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced elective course"
+  },
+  {
+   "code": "BR401",
+   "name": "Introduction to cognitive brain science",
+   "nameKo": "인지뇌과학개론(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "BR402",
+   "name": "Neurophysiology",
+   "nameKo": "신경생리학(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "BR403",
+   "name": "Neuroregeneration and Degeneration",
+   "nameKo": "신경재생 및 퇴행(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "BR404",
+   "name": "Learning and Memory",
+   "nameKo": "학습과 기억(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "BR406",
+   "name": "Systems Brain Sciences",
+   "nameKo": "시스템 뇌과학(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "BR407",
+   "name": "Neuroscience-Inspired AI",
+   "nameKo": "인공지능과 뇌과학(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Brain Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "BS101",
+   "name": "Multivariable Calculus",
+   "nameKo": "다변수 미적분학",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS102a",
+   "name": "Engineering MathematicsⅠ",
+   "nameKo": "공학수학Ⅰ",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS103a",
+   "name": "General PhysicsⅠ",
+   "nameKo": "일반물리Ⅰ",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS104a",
+   "name": "General Physics LabⅠ",
+   "nameKo": "일반물리실험Ⅰ",
+   "credits": 1,
+   "semester": [
+    "봄"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS105a",
+   "name": "General PhysicsⅡ",
+   "nameKo": "일반물리Ⅱ",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS106a",
+   "name": "General Physics LabⅡ - EMI (English-Medium Instruction) course",
+   "nameKo": "일반물리실험Ⅱ - 영어강의",
+   "credits": 1,
+   "semester": [
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS113",
+   "name": "General Chemistry Lab Ⅰ - EMI (English-Medium Instruction) course",
+   "nameKo": "일반화학실험Ⅰ - 영어강의",
+   "credits": 1,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS114",
+   "name": "Introduction to Biology",
+   "nameKo": "생명과학개론",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS115",
+   "name": "General Biology Lab",
+   "nameKo": "일반생물학 실험",
+   "credits": 1,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS116",
+   "name": "General Biology I",
+   "nameKo": "일반생물학Ⅰ",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS117",
+   "name": "General Biology Ⅱ",
+   "nameKo": "일반생물학Ⅱ",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS118",
+   "name": "General chemistryⅠ",
+   "nameKo": "일반화학Ⅰ",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS119",
+   "name": "General Chemistry II",
+   "nameKo": "일반화학Ⅱ",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS120",
+   "name": "Single Variable Calculus",
+   "nameKo": "일변수 미적분학",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F"
+   ],
+   "category": "Basic elective course"
+  },
+  {
+   "code": "BS120a",
+   "name": "Single Variable Calculus",
+   "nameKo": "일변수 미적분학",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [
+    "BS120"
+   ],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Basic elective course"
+  },
+  {
+   "code": "BS201a",
+   "name": "Engineering MathematicsⅡ",
+   "nameKo": "공학수학Ⅱ",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS201b",
+   "name": "Engineering MathematicsⅡ",
+   "nameKo": "공학수학Ⅱ",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [
+    "BS201a"
+   ],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS202",
+   "name": "Introduction to Probability and Mathematical Statistics with R",
+   "nameKo": "확률과 통계 및 실습",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS202a",
+   "name": "Introduction to Probability and Mathematical Statistics",
+   "nameKo": "확률과 통계 및 실습",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [
+    "BS202"
+   ],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS203",
+   "name": "Linear Algebra",
+   "nameKo": "선형대수학",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "BS203a",
+   "name": "Linear Algebra",
+   "nameKo": "선형대수학",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Basic Science",
+   "prerequisites": [],
+   "equivalents": [
+    "BS203"
+   ],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "CE201a",
+   "name": "Basic experiments for chemical engineers",
+   "nameKo": "화학공학기초실험(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Chemical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CE301",
+   "name": "Chemical Reaction Engineering",
+   "nameKo": "반응공학(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Chemical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CE302",
+   "name": "Introduction to Transport Phenomena",
+   "nameKo": "이동현상개론(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Chemical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CE303",
+   "name": "Chemical engineering thermodynamics",
+   "nameKo": "화학공학열역학(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Chemical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CE401",
+   "name": "Introduction to Polymer Science and Engineering",
+   "nameKo": "고분자개론(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Chemical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CE402",
+   "name": "Chemical Product and Process Design",
+   "nameKo": "화학 제품 및 공정 설계(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Chemical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM201",
+   "name": "Analytical Chemistry",
+   "nameKo": "분석화학(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM202",
+   "name": "Inorganic Chemistry I",
+   "nameKo": "무기화학Ⅰ(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM203",
+   "name": "Physical Chemistry I",
+   "nameKo": "물리화학Ⅰ(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM204",
+   "name": "Organic Chemistry II",
+   "nameKo": "유기화학Ⅱ(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM205",
+   "name": "Organic Chemistry I",
+   "nameKo": "유기화학Ⅰ(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM206",
+   "name": "General chemistry laboratoryⅡ",
+   "nameKo": "일반화학실험Ⅱ(이)",
+   "credits": 1,
+   "semester": [
+    "봄"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM301",
+   "name": "Advanced Chemistry Lab I (Analytical and Organic Chemistry)",
+   "nameKo": "심화화학실험Ⅰ(이)",
+   "credits": 2,
+   "semester": [
+    "봄"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM302",
+   "name": "Advanced Chemistry Lab Ⅱ (Physical and Inorganic Chemistry)",
+   "nameKo": "심화화학실험Ⅱ(이)",
+   "credits": 2,
+   "semester": [
+    "가을"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM303",
+   "name": "Organic Chemistry III",
+   "nameKo": "유기화학Ⅲ(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM304",
+   "name": "Physical Chemistry Ⅲ",
+   "nameKo": "물리화학Ⅲ(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM305",
+   "name": "Inorganic Chemistry II",
+   "nameKo": "무기화학Ⅱ(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM306",
+   "name": "Physical Chemistry II",
+   "nameKo": "물리화학Ⅱ(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM403",
+   "name": "Photophysical Chemistry",
+   "nameKo": "광물리화학 개론(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM404",
+   "name": "Computational Chemistry",
+   "nameKo": "계산화학(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM405",
+   "name": "Organometallic Chemistry",
+   "nameKo": "유기금속화학(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CHEM406",
+   "name": "Polymer Chemistry",
+   "nameKo": "고분자화학(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Chemistry",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE201",
+   "name": "Object-Oriented Programming",
+   "nameKo": "객체지향 프로그래밍(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE202",
+   "name": "Discrete Mathematics",
+   "nameKo": "이산수학(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE203",
+   "name": "Data Structure",
+   "nameKo": "자료구조(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE204",
+   "name": "Artificial Intelligence Basics",
+   "nameKo": "인공지능기초(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [
+    "BE201"
+   ],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE205",
+   "name": "Theory of Computation",
+   "nameKo": "계산이론(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE301",
+   "name": "Computer Algorithms",
+   "nameKo": "컴퓨터 알고리즘(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE302",
+   "name": "Introduction to Machine Learning",
+   "nameKo": "기계학습개론(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE303",
+   "name": "Introduction to Deep Learning",
+   "nameKo": "딥러닝개론(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE304",
+   "name": "Operating Systems",
+   "nameKo": "운영체제(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE305",
+   "name": "Computer Architecture",
+   "nameKo": "컴퓨터구조(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE306",
+   "name": "System Programming",
+   "nameKo": "시스템 프로그래밍(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE307",
+   "name": "Programming Languages",
+   "nameKo": "프로그래밍 언어(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE401",
+   "name": "Introduction to Databases",
+   "nameKo": "데이터베이스개론(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE403",
+   "name": "Computer Networks",
+   "nameKo": "컴퓨터 네트워크(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE404",
+   "name": "Introduction to Computer Vision",
+   "nameKo": "컴퓨터 비전 개론(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "CSE405",
+   "name": "Introduction to Computer Security",
+   "nameKo": "컴퓨터보안개론(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Computer Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "EE201",
+   "name": "Digital Logic Design",
+   "nameKo": "디지털 논리회로(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Electrical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "EE301",
+   "name": "Signals and Systems",
+   "nameKo": "신호 및 시스템(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Electrical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "EE303",
+   "name": "Introduction to Electronic Circuits",
+   "nameKo": "전자회로 이론(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Electrical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "EE304",
+   "name": "Introduction to Semiconductor Physics",
+   "nameKo": "반도체물성 개론(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Electrical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "EE305",
+   "name": "Principles of Communications",
+   "nameKo": "통신의 기초(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Electrical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "EE306",
+   "name": "Analog Electronic Circuits",
+   "nameKo": "아날로그 전자회로(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Electrical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "EE401",
+   "name": "Digital Signal Processing",
+   "nameKo": "디지털 신호처리(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Electrical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "EE402",
+   "name": "Digital Image Processing",
+   "nameKo": "디지털 영상처리(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Electrical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "EE403",
+   "name": "Digital Communications",
+   "nameKo": "디지털통신(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Electrical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "EE404",
+   "name": "Device Fabrication Process for Nanotechnology",
+   "nameKo": "반도체공정개론(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Electrical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "EE406",
+   "name": "Intelligent Control Systems",
+   "nameKo": "지능형제어시스템(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Electrical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "EE407",
+   "name": "Digital Integrated Circuit Design",
+   "nameKo": "디지털집적회로설계(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Electrical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "GC101",
+   "name": "Academic English: Speaking and Correspondence",
+   "nameKo": "Academic English: Speaking and Correspondence",
+   "credits": 2,
+   "semester": [
+    "봄"
+   ],
+   "department": "Global Communication",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "GC102",
+   "name": "Academic English: Research and Writing",
+   "nameKo": "Academic English: Research and Writing",
+   "credits": 2,
+   "semester": [
+    "가을"
+   ],
+   "department": "Global Communication",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS101",
+   "name": "Introduction to Economics",
+   "nameKo": "경제학 입문",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS102",
+   "name": "Science and Technology in Modern Society - EMI (English-Medium Instruction) course",
+   "nameKo": "과학기술과 현대사회 - 영어강의",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS103",
+   "name": "Law and Society",
+   "nameKo": "법과 사회",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS104a",
+   "name": "Introduction to Fiction",
+   "nameKo": "소설의 이해",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS105",
+   "name": "Ethical Issues in Contemporary Society",
+   "nameKo": "현대 사회와 윤리",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS106",
+   "name": "Comparative Politics",
+   "nameKo": "비교정치학",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS107",
+   "name": "Introduction to Linguistics",
+   "nameKo": "언어학입문",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS108",
+   "name": "Comparative History - EMI (English-Medium Instruction) course",
+   "nameKo": "비교역사학 - 영어강의",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS109a",
+   "name": "Academic Writing",
+   "nameKo": "학술 글쓰기",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS110",
+   "name": "Understanding Korean Politics",
+   "nameKo": "한국 정치의 이해",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS112",
+   "name": "Introduction to Sociology",
+   "nameKo": "사회학의 이해",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS113",
+   "name": "Introduction to Intercultural Commuincation",
+   "nameKo": "글로벌 문화와 의사소통",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS114",
+   "name": "Introduction to Geography",
+   "nameKo": "지리학 입문",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS115",
+   "name": "Journey to Psychology",
+   "nameKo": "심리학으로의 여행",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS116",
+   "name": "Understanding Anthropology",
+   "nameKo": "인류학의 이해",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS117",
+   "name": "Humans and Religions",
+   "nameKo": "인간과 종교",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS118",
+   "name": "Seminar for Comprehensive Competency Cultivation",
+   "nameKo": "미래소양강좌",
+   "credits": 1,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS119",
+   "name": "Career Exploration and Major Design I",
+   "nameKo": "진로탐색 및 전공설계Ⅰ",
+   "credits": 1,
+   "semester": [
+    "봄"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS120",
+   "name": "Career Exploration and Major Design II",
+   "nameKo": "진로탐색 및 전공설계 II",
+   "credits": 1,
+   "semester": [
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS121",
+   "name": "Introduction to Traditional Korean Culture",
+   "nameKo": "Introduction to Traditional Korean Culture - 영어강좌",
+   "credits": 2,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS122",
+   "name": "Introduction to Philosophy",
+   "nameKo": "Introduction to Philosophy - 영어강좌",
+   "credits": 2,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS123",
+   "name": "Korea and International Relations - EMI (English-Medium Instruction) course",
+   "nameKo": "Korea and International Relations - 영어강의",
+   "credits": 2,
+   "semester": [
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS201",
+   "name": "Basic Issues in History of Science and Technology",
+   "nameKo": "과학기술사의 주요 장면",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS202",
+   "name": "Issues in Philosophy of Science",
+   "nameKo": "과학철학의 쟁점",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS203",
+   "name": "Social and Political Thoughts in Modern Society",
+   "nameKo": "근대 사회와 사상",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS204",
+   "name": "Global Political Economy",
+   "nameKo": "글로벌 정치경제 - 영어 강좌",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS205",
+   "name": "Comparative Literature",
+   "nameKo": "동서양문학의 이해",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS207a",
+   "name": "Introduction to Communication Studies",
+   "nameKo": "커뮤니케이션 특강",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS208a",
+   "name": "Classics in Philosophy",
+   "nameKo": "철학 고전의 이해",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS210",
+   "name": "Great Books Colloquium",
+   "nameKo": "고전의 산책",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS211",
+   "name": "Gender and Society",
+   "nameKo": "젠더와 사회",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS212",
+   "name": "General Theory of Rights change",
+   "nameKo": "권리변동의 일반",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS213",
+   "name": "Reading literary texts in English: A thematic approach - EMI (English-Medium Instruction) course",
+   "nameKo": "영어 문학 텍스트 : 주제적 접근 읽기 - 영어강의",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS214",
+   "name": "Literature and Film",
+   "nameKo": "문학과 영화",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS215",
+   "name": "Urban Geography - Urban Geography",
+   "nameKo": "도시지리학",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS218",
+   "name": "Introduction to the Religions in the World - EMI (English-Medium Instruction) course",
+   "nameKo": "세계종교입문 - 영어강의",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS219",
+   "name": "Special Topics in Humanities Ⅰ - Modern Korean Literature & Society",
+   "nameKo": "인문학 특강Ⅰ - 한국문학과 한국사회",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS221",
+   "name": "Special Topics in Social Sciences Ⅰ - Cognitive Psychology",
+   "nameKo": "사회과학 특강Ⅰ - 인지심리학",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS222",
+   "name": "Special Topics in Social Sciences Ⅱ - North Korean Society and Culture - EMI (English-Medium Instruction) course",
+   "nameKo": "사회과학 특강Ⅱ - 북한사회와 문화 - 영어강의",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS223",
+   "name": "Philosophy of Mind",
+   "nameKo": "심리철학 - 영어 강좌",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS224",
+   "name": "Reading Poetry - EMI (English-Medium Instruction) course",
+   "nameKo": "시 읽기의 즐거움 - 영어강의",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "HSS301a",
+   "name": "Scientific Writing",
+   "nameKo": "Scientific Writing",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Humanities & Social Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Basic compulsory course"
+  },
+  {
+   "code": "INT201",
+   "name": "internshipⅠ",
+   "nameKo": "국내 인턴십Ⅰ",
+   "credits": 1,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Internship",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "INT202",
+   "name": "internshipⅡ",
+   "nameKo": "국내 인턴십Ⅱ",
+   "credits": 1,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Internship",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "INT203",
+   "name": "internshipⅢ",
+   "nameKo": "국내 인턴십Ⅲ",
+   "credits": 2,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Internship",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "INT204",
+   "name": "internshipⅣ",
+   "nameKo": "국내 인턴십Ⅳ",
+   "credits": 2,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Internship",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "INT211",
+   "name": "Global InternshipⅤ",
+   "nameKo": "해외 인턴십Ⅴ",
+   "credits": 2,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Internship",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "INT212",
+   "name": "Global InternshipⅥ",
+   "nameKo": "해외 인턴십Ⅵ",
+   "credits": 2,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Internship",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "INT213",
+   "name": "Global InternshipⅦ",
+   "nameKo": "해외 인턴십Ⅶ",
+   "credits": 2,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Internship",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "INT214",
+   "name": "Global InternshipⅧ",
+   "nameKo": "해외 인턴십Ⅷ",
+   "credits": 2,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Internship",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "INT401",
+   "name": "internshipⅤ",
+   "nameKo": "국내 인턴십Ⅴ",
+   "credits": 2,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Internship",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "INT402",
+   "name": "internshipⅥ",
+   "nameKo": "국내 인턴십Ⅵ",
+   "credits": 2,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Internship",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS202",
+   "name": "Genetics",
+   "nameKo": "유전학(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS203",
+   "name": "Cell Biology Lab",
+   "nameKo": "세포생물학 실험(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS204",
+   "name": "Cell Biology",
+   "nameKo": "세포생물학(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS205",
+   "name": "Genetics Lab",
+   "nameKo": "유전학 실험(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS206",
+   "name": "Bioanalytical Chemistry",
+   "nameKo": "생명분석화학(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS301b",
+   "name": "Topics in New Biology",
+   "nameKo": "뉴바이올로지특강(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Advanced elective course"
+  },
+  {
+   "code": "LS302b",
+   "name": "Topics in Brain Sciences",
+   "nameKo": "뇌과학 특강(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Advanced elective course"
+  },
+  {
+   "code": "LS303b",
+   "name": "Quantitative Life Science",
+   "nameKo": "정량 생명과학(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS304",
+   "name": "Ecology and Evolution",
+   "nameKo": "생명체의 다양성과 유기적 관계(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS305",
+   "name": "Neuroscience Ⅰ",
+   "nameKo": "신경과학 Ⅰ(이)",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS306",
+   "name": "Neuroscience Ⅱ",
+   "nameKo": "신경과학 Ⅱ (이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS307",
+   "name": "Molecular Biology",
+   "nameKo": "분자생물학(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS308",
+   "name": "Biochemistry I",
+   "nameKo": "생화학Ⅰ(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS309",
+   "name": "Biochemistry II",
+   "nameKo": "생화학Ⅱ(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS311",
+   "name": "Life science and society",
+   "nameKo": "생명과학과 사회(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS312",
+   "name": "Technology for drug development",
+   "nameKo": "의약품공학(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS313",
+   "name": "Molecular Biology Lab",
+   "nameKo": "분자생물학 실험(이)",
+   "credits": 2,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS313a",
+   "name": "Molecular Biology Lab",
+   "nameKo": "분자생물학 실험(이)",
+   "credits": 2,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [
+    "LS313"
+   ],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS314",
+   "name": "Nobel Prize Winning Discoveries in Life Sciences",
+   "nameKo": "생명과학 노벨상 수상의 위대한 발견(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS401a",
+   "name": "Immunology",
+   "nameKo": "면역학(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS403",
+   "name": "Principles of Development",
+   "nameKo": "발생 및 발달생물학(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS406",
+   "name": "Biomedical Engineering",
+   "nameKo": "의생명공학(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS407a",
+   "name": "Human Physiology",
+   "nameKo": "인체생리학(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS410",
+   "name": "Microbiology",
+   "nameKo": "현대 미생물학(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS411",
+   "name": "Introduction to Computational Brain Science",
+   "nameKo": "계산뇌과학입문(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS412",
+   "name": "Neurobiology of Disease",
+   "nameKo": "뇌질환(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS413",
+   "name": "Optical Microscopy",
+   "nameKo": "광학현미경(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS414",
+   "name": "Cancer Biology",
+   "nameKo": "암생물학(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "LS415",
+   "name": "Stem Cell Biology",
+   "nameKo": "줄기세포생물학(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Life Sciences",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH201",
+   "name": "Solid Mechanics",
+   "nameKo": "고체역학(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH203",
+   "name": "Dynamics",
+   "nameKo": "동역학(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH204",
+   "name": "Mechanical Engineering Thermodynamics",
+   "nameKo": "기계열역학(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH205",
+   "name": "Introduction to Biomedical Engineering",
+   "nameKo": "의공학개론(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH301",
+   "name": "Robots for Human",
+   "nameKo": "인간과 공학(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH303",
+   "name": "Kinematics",
+   "nameKo": "기구학(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH304a",
+   "name": "Integrated Modeling and System Engineering",
+   "nameKo": "시스템의 통합적 모델링(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH306",
+   "name": "Engineering Vibration",
+   "nameKo": "진동공학(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH307",
+   "name": "Introduction to Artificial Intelligence",
+   "nameKo": "인공지능개론(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH309",
+   "name": "Introduction to Control Engineering (Lecture)",
+   "nameKo": "자동제어시스템(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH311",
+   "name": "Fluid dynamics",
+   "nameKo": "유체역학(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH312",
+   "name": "Mechatronics",
+   "nameKo": "메카트로닉스(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH313",
+   "name": "Electronics for Robotics",
+   "nameKo": "로봇전자공학(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH401",
+   "name": "Robot Dynamics and Control",
+   "nameKo": "로봇동역학 및 제어(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH402",
+   "name": "Micro/Nano Engineering",
+   "nameKo": "마이크로/나노공학(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH404a",
+   "name": "Creative Engineering Design",
+   "nameKo": "창의공학설계(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH405",
+   "name": "Fundamental of Heat Transfer",
+   "nameKo": "열전달(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH406",
+   "name": "Material Properties for Mechanical Applications",
+   "nameKo": "기계재료학(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MECH407",
+   "name": "Introduction to Mobile System",
+   "nameKo": "모빌리티공학개론(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Mechanical Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MSE302",
+   "name": "Introduction to Thermodynamics of Materials",
+   "nameKo": "재료열역학 개론(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Materials Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MSE303",
+   "name": "Nano Materials and Characterization",
+   "nameKo": "나노재료학(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Materials Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MSE305a",
+   "name": "Introduction to materials science & engineeringⅠ",
+   "nameKo": "재료공학개론Ⅰ(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Materials Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MSE306a",
+   "name": "Introduction to materials science & engineeringⅡ",
+   "nameKo": "재료공학개론Ⅱ(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Materials Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MSE307",
+   "name": "Experiment in Materials Science & Engineering",
+   "nameKo": "재료공학실험(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Materials Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MSE308",
+   "name": "Data-Driven Materials Engineering",
+   "nameKo": "데이터 기반 신소재 공학(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Materials Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MSE309",
+   "name": "Introduction to Ceramic Materials",
+   "nameKo": "세라믹개론(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Materials Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MSE402",
+   "name": "Phase Transformations",
+   "nameKo": "재료상변태(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Materials Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MSE403",
+   "name": "Electronic materials",
+   "nameKo": "전자재료학(공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Materials Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MSE404a",
+   "name": "Crystallography and Diffraction",
+   "nameKo": "결정학 및 회절(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Materials Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MSE406",
+   "name": "Materials science of thin films",
+   "nameKo": "박막재료공학(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Materials Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "MSE407",
+   "name": "Mechanical Behavior of Materials",
+   "nameKo": "재료의 기계적 거동(공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Materials Science & Engineering",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY201a",
+   "name": "Thermal & Statistical Physics",
+   "nameKo": "열 및 통계 물리(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY202a",
+   "name": "Analytical MechanicsⅠ",
+   "nameKo": "해석역학Ⅰ(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY203a",
+   "name": "Electrodynamics I",
+   "nameKo": "전기역학Ⅰ(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY204",
+   "name": "Analytical MechanicsⅡ",
+   "nameKo": "해석역학Ⅱ(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY205a",
+   "name": "Modern Physics",
+   "nameKo": "현대물리(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY301",
+   "name": "Applied Physics Experiments",
+   "nameKo": "응용물리 실험(이.공)",
+   "credits": 2,
+   "semester": [
+    "가을"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY302a",
+   "name": "Advanced Physics Lab",
+   "nameKo": "고급물리 실험(이)",
+   "credits": 2,
+   "semester": [
+    "봄"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY303",
+   "name": "Solid State PhysicsⅠ",
+   "nameKo": "고체물리Ⅰ(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY304",
+   "name": "Quantum MechanicsⅠ",
+   "nameKo": "양자역학Ⅰ(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY305",
+   "name": "Quantum MechanicsⅡ",
+   "nameKo": "양자역학Ⅱ(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY306",
+   "name": "Mathematical Physics",
+   "nameKo": "수리물리(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY307",
+   "name": "Special Topics in Applied Physics",
+   "nameKo": "응용물리특론(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY308",
+   "name": "ElectrodynamicsⅡ",
+   "nameKo": "전기역학Ⅱ(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY309",
+   "name": "Differential Geometry and General Relativity",
+   "nameKo": "미분기하학과 일반상대론(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY401",
+   "name": "Modern Optics",
+   "nameKo": "현대광학(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY403",
+   "name": "Solid State Physics Ⅱ",
+   "nameKo": "고체물리Ⅱ(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY405",
+   "name": "Biophysics",
+   "nameKo": "생물물리학(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY406",
+   "name": "Computational Physics",
+   "nameKo": "전산물리(이)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY407",
+   "name": "Introduction to Quantum Computing",
+   "nameKo": "양자 컴퓨팅 개론(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY408",
+   "name": "Atomic & Molecular Physics",
+   "nameKo": "원자분자물리학(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "PHY409",
+   "name": "Introduction to Particle Physics",
+   "nameKo": "입자물리개론(이)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Physics",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "RP303",
+   "name": "Semiconductor Research Practice I (Basic)",
+   "nameKo": "반도체 연구실무 기초(공)",
+   "credits": 4,
+   "semester": [
+    "가을"
+   ],
+   "department": "Research Practice",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced elective course"
+  },
+  {
+   "code": "SM202",
+   "name": "Introduction to Semiconductor material engineering",
+   "nameKo": "반도체 재료공학 개론(공)(반)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Semiconductor",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "SM203a",
+   "name": "Introduction to Semiconductor Physics",
+   "nameKo": "반도체물성 개론(공)(반)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Semiconductor",
+   "prerequisites": [],
+   "equivalents": [
+    "EE304"
+   ],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "SM204",
+   "name": "Introduction to Semiconductor Fabrication",
+   "nameKo": "반도체공정개론(공)(반)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Semiconductor",
+   "prerequisites": [],
+   "equivalents": [
+    "EE404"
+   ],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "SM303",
+   "name": "Fundamentals of Electronic Devices",
+   "nameKo": "전자소자개론(공)(반)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Semiconductor",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "SM304",
+   "name": "Introduction to Electronic Circuits",
+   "nameKo": "전자회로 이론(공)(반)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Semiconductor",
+   "prerequisites": [],
+   "equivalents": [
+    "EE303"
+   ],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "SM305",
+   "name": "Semiconductor Fabrication Lab",
+   "nameKo": "반도체공정실습(공)(반)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Semiconductor",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "SM306",
+   "name": "Semiconductor Process Applications",
+   "nameKo": "반도체공정응용(공)(반)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Semiconductor",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "SM307",
+   "name": "Digital Electronic Circuit",
+   "nameKo": "디지털 전자회로(공)(반)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Semiconductor",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "SM308",
+   "name": "Analog Electronic Circuits",
+   "nameKo": "아날로그 전자회로(공)(반)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Semiconductor",
+   "prerequisites": [],
+   "equivalents": [
+    "EE306"
+   ],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP101",
+   "name": "Design Thinking",
+   "nameKo": "디자인 사고",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP201",
+   "name": "Design Planning and Strategy",
+   "nameKo": "디자인 기획과 전략",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP202",
+   "name": "Introduction to Urban Air Mobility",
+   "nameKo": "도심항공교통개론(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP203",
+   "name": "The Sound and The Music",
+   "nameKo": "소리와 음악(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP301",
+   "name": "Communication and Modern Society",
+   "nameKo": "커뮤니케이션과 현대사회",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP305",
+   "name": "Game Theory",
+   "nameKo": "게임이론",
+   "credits": 3,
+   "semester": [
+    "봄",
+    "가을"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F",
+    "2025S",
+    "2026F",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP307a",
+   "name": "User experience design - User experience design",
+   "nameKo": "UX디자인",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP308",
+   "name": "Integrative understanding of life",
+   "nameKo": "생명에 대한 융합적 이해",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP309",
+   "name": "Introduction to Mathematical Analysis for the Undergraduate",
+   "nameKo": "학부생을 위한 해석학 개론",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP310",
+   "name": "Modern Algebra",
+   "nameKo": "현대대수학 개론",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S",
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP312",
+   "name": "Fluid Mechanics of Animals' Adaptation",
+   "nameKo": "적응의 유체역학(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP313",
+   "name": "Introduction to topology",
+   "nameKo": "위상수학개론",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP314",
+   "name": "Introduction to Biomolecular Mechanics",
+   "nameKo": "생체분자역학개론(이,공)",
+   "credits": 3,
+   "semester": [
+    "가을"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026F"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP403",
+   "name": "Introduction to Geometry",
+   "nameKo": "기하학 개론",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2025S"
+   ],
+   "category": "Advanced compulsory course"
+  },
+  {
+   "code": "TP406",
+   "name": "Geometry of Tensors and Applications",
+   "nameKo": "텐서들의 기하학과 그 응용(이,공)",
+   "credits": 3,
+   "semester": [
+    "봄"
+   ],
+   "department": "Track Program",
+   "prerequisites": [],
+   "equivalents": [],
+   "offeredTerms": [
+    "2026S"
+   ],
+   "category": "Advanced compulsory course"
+  }
+ ]
+}
