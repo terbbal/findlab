@@ -1,0 +1,590 @@
+{
+ "meta": {
+  "approved": "2026-11-21",
+  "note": "Skill → DGIST course links (many-to-many by course code). courses: [] means no DGIST course — learn outside DGIST. Approved by the team; do not add courses that are not in dgist_courses.json."
+ },
+ "skills": [
+  {
+   "name": "Sensors & wearables",
+   "courses": [
+    "BE205",
+    "MECH313",
+    "LS406"
+   ],
+   "reasons": {
+    "BE205": "계측법 기초",
+    "MECH313": "센서·로봇 전자",
+    "LS406": "의료기기·의생명공학"
+   }
+  },
+  {
+   "name": "Simulation / FEM",
+   "courses": [
+    "MECH201",
+    "MECH304a",
+    "PHY406"
+   ],
+   "reasons": {
+    "MECH201": "구조 역학 모델링",
+    "MECH304a": "시스템 통합 모델링",
+    "PHY406": "수치해석·전산물리"
+   }
+  },
+  {
+   "name": "Optics & photonics",
+   "courses": [
+    "PHY401",
+    "LS413",
+    "CHEM403"
+   ],
+   "reasons": {
+    "PHY401": "현대광학",
+    "LS413": "광학현미경 원리",
+    "CHEM403": "광물리화학"
+   }
+  },
+  {
+   "name": "Animal experiments",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Materials characterization",
+   "courses": [
+    "MSE303",
+    "MSE404a",
+    "MSE307"
+   ],
+   "reasons": {
+    "MSE303": "나노재료 분석",
+    "MSE404a": "결정학·회절(XRD)",
+    "MSE307": "재료 분석 실험"
+   }
+  },
+  {
+   "name": "Polymer science",
+   "courses": [
+    "CE401",
+    "CHEM406"
+   ],
+   "reasons": {
+    "CE401": "고분자 개론",
+    "CHEM406": "고분자화학"
+   }
+  },
+  {
+   "name": "Deep learning",
+   "courses": [
+    "CSE303"
+   ],
+   "reasons": {
+    "CSE303": "딥러닝 개론"
+   }
+  },
+  {
+   "name": "Nanomaterials",
+   "courses": [
+    "MSE303",
+    "MECH402"
+   ],
+   "reasons": {
+    "MSE303": "나노재료학",
+    "MECH402": "마이크로/나노 공학"
+   }
+  },
+  {
+   "name": "Electrochemistry",
+   "courses": [
+    "CHEM201"
+   ],
+   "reasons": {
+    "CHEM201": "전기분석법 포함(기초)"
+   }
+  },
+  {
+   "name": "Battery electrochemistry",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Optimization",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Quantum physics",
+   "courses": [
+    "PHY205a",
+    "PHY304",
+    "PHY305"
+   ],
+   "reasons": {
+    "PHY205a": "현대물리",
+    "PHY304": "양자역학Ⅰ",
+    "PHY305": "양자역학Ⅱ"
+   }
+  },
+  {
+   "name": "Semiconductor devices",
+   "courses": [
+    "SM203a",
+    "SM303"
+   ],
+   "reasons": {
+    "SM203a": "반도체 물성",
+    "SM303": "전자소자"
+   }
+  },
+  {
+   "name": "Machine learning",
+   "courses": [
+    "CSE302",
+    "CSE204",
+    "MECH307"
+   ],
+   "reasons": {
+    "CSE302": "기계학습 개론",
+    "CSE204": "인공지능 기초",
+    "MECH307": "인공지능 개론"
+   }
+  },
+  {
+   "name": "Signal processing",
+   "courses": [
+    "EE301",
+    "EE401"
+   ],
+   "reasons": {
+    "EE301": "신호 및 시스템",
+    "EE401": "디지털 신호처리"
+   }
+  },
+  {
+   "name": "Catalysis",
+   "courses": [
+    "CE301",
+    "CHEM405"
+   ],
+   "reasons": {
+    "CE301": "반응속도·촉매",
+    "CHEM405": "유기금속·균일촉매"
+   }
+  },
+  {
+   "name": "Thin-film fabrication",
+   "courses": [
+    "MSE406",
+    "SM204",
+    "SM305"
+   ],
+   "reasons": {
+    "MSE406": "박막 재료",
+    "SM204": "반도체 공정",
+    "SM305": "공정 실습"
+   }
+  },
+  {
+   "name": "Microscopy & imaging",
+   "courses": [
+    "LS413",
+    "EE402"
+   ],
+   "reasons": {
+    "LS413": "광학현미경",
+    "EE402": "이미지 분석"
+   }
+  },
+  {
+   "name": "Cell culture",
+   "courses": [
+    "LS203"
+   ],
+   "reasons": {
+    "LS203": "세포 실험 실습"
+   }
+  },
+  {
+   "name": "Magnetism / spintronics",
+   "courses": [
+    "PHY303",
+    "PHY403"
+   ],
+   "reasons": {
+    "PHY303": "고체 자성(Ⅰ)",
+    "PHY403": "고체 자성(Ⅱ)"
+   }
+  },
+  {
+   "name": "Autonomous systems / SLAM",
+   "courses": [
+    "MECH407",
+    "CSE404"
+   ],
+   "reasons": {
+    "MECH407": "이동체 시스템",
+    "CSE404": "비전 기반 인식"
+   }
+  },
+  {
+   "name": "Wireless communications",
+   "courses": [
+    "EE305",
+    "EE403"
+   ],
+   "reasons": {
+    "EE305": "통신 기초",
+    "EE403": "디지털 통신"
+   }
+  },
+  {
+   "name": "Sequencing & genomics",
+   "courses": [
+    "LS202",
+    "LS307"
+   ],
+   "reasons": {
+    "LS202": "유전학",
+    "LS307": "분자생물학"
+   }
+  },
+  {
+   "name": "Robot dynamics & kinematics",
+   "courses": [
+    "MECH203",
+    "MECH303",
+    "MECH401"
+   ],
+   "reasons": {
+    "MECH203": "동역학",
+    "MECH303": "기구학",
+    "MECH401": "로봇 동역학"
+   }
+  },
+  {
+   "name": "Embedded systems",
+   "courses": [
+    "EE201",
+    "MECH312",
+    "CSE306"
+   ],
+   "reasons": {
+    "EE201": "디지털 논리",
+    "MECH312": "마이크로컨트롤러 응용",
+    "CSE306": "저수준 프로그래밍"
+   }
+  },
+  {
+   "name": "Soft robotics & actuators",
+   "courses": [
+    "MECH312"
+   ],
+   "reasons": {
+    "MECH312": "액추에이터 구동"
+   }
+  },
+  {
+   "name": "Computer vision",
+   "courses": [
+    "CSE404",
+    "EE402"
+   ],
+   "reasons": {
+    "CSE404": "컴퓨터 비전",
+    "EE402": "영상처리"
+   }
+  },
+  {
+   "name": "Proteomics / mass spec",
+   "courses": [
+    "LS206",
+    "LS308"
+   ],
+   "reasons": {
+    "LS206": "생명분석화학",
+    "LS308": "단백질 생화학"
+   }
+  },
+  {
+   "name": "Survey & qualitative research",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "DFT / computational chemistry",
+   "courses": [
+    "CHEM404"
+   ],
+   "reasons": {
+    "CHEM404": "계산화학"
+   }
+  },
+  {
+   "name": "Solar cells / perovskites",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Statistics",
+   "courses": [
+    "BS202a",
+    "LS303b"
+   ],
+   "reasons": {
+    "BS202a": "확률·통계",
+    "LS303b": "정량 분석"
+   }
+  },
+  {
+   "name": "Control systems",
+   "courses": [
+    "MECH309",
+    "EE406",
+    "MECH401"
+   ],
+   "reasons": {
+    "MECH309": "자동제어",
+    "EE406": "지능형 제어",
+    "MECH401": "로봇 제어"
+   }
+  },
+  {
+   "name": "Circuit design",
+   "courses": [
+    "BE205",
+    "SM304",
+    "SM308",
+    "EE407"
+   ],
+   "reasons": {
+    "BE205": "회로이론",
+    "SM304": "전자회로",
+    "SM308": "아날로그 회로",
+    "EE407": "디지털 IC 설계"
+   }
+  },
+  {
+   "name": "Molecular biology techniques",
+   "courses": [
+    "LS313",
+    "LS205"
+   ],
+   "reasons": {
+    "LS313": "분자생물 실험",
+    "LS205": "유전학 실험"
+   }
+  },
+  {
+   "name": "Economics & innovation",
+   "courses": [
+    "HSS101",
+    "TP305"
+   ],
+   "reasons": {
+    "HSS101": "경제학 기초",
+    "TP305": "게임이론"
+   }
+  },
+  {
+   "name": "ROS",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Single-cell analysis",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Decision analysis",
+   "courses": [
+    "TP305"
+   ],
+   "reasons": {
+    "TP305": "전략적 의사결정"
+   }
+  },
+  {
+   "name": "Electrophysiology",
+   "courses": [
+    "BR402",
+    "LS305"
+   ],
+   "reasons": {
+    "BR402": "신경생리학",
+    "LS305": "신경과학"
+   }
+  },
+  {
+   "name": "CRISPR gene editing",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Molecular dynamics",
+   "courses": [
+    "CHEM404",
+    "PHY406"
+   ],
+   "reasons": {
+    "CHEM404": "분자 시뮬레이션",
+    "PHY406": "전산 시뮬레이션"
+   }
+  },
+  {
+   "name": "Superconductivity",
+   "courses": [
+    "PHY403"
+   ],
+   "reasons": {
+    "PHY403": "고체물리 심화 주제"
+   }
+  },
+  {
+   "name": "NLP / language models",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Large language models",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Data engineering",
+   "courses": [
+    "CSE401",
+    "CSE203"
+   ],
+   "reasons": {
+    "CSE401": "데이터베이스",
+    "CSE203": "자료구조"
+   }
+  },
+  {
+   "name": "Human-robot interaction",
+   "courses": [
+    "MECH301"
+   ],
+   "reasons": {
+    "MECH301": "사람을 위한 로봇"
+   }
+  },
+  {
+   "name": "Systems & networking",
+   "courses": [
+    "CSE403",
+    "CSE304"
+   ],
+   "reasons": {
+    "CSE403": "네트워크",
+    "CSE304": "운영체제"
+   }
+  },
+  {
+   "name": "Security & cryptography",
+   "courses": [
+    "CSE405"
+   ],
+   "reasons": {
+    "CSE405": "컴퓨터 보안"
+   }
+  },
+  {
+   "name": "EEG",
+   "courses": [
+    "BR302"
+   ],
+   "reasons": {
+    "BR302": "뇌신호 측정·공학"
+   }
+  },
+  {
+   "name": "Organic synthesis",
+   "courses": [
+    "CHEM205",
+    "CHEM204",
+    "CHEM303"
+   ],
+   "reasons": {
+    "CHEM205": "유기화학Ⅰ",
+    "CHEM204": "유기화학Ⅱ",
+    "CHEM303": "유기화학Ⅲ"
+   }
+  },
+  {
+   "name": "MATLAB",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Reinforcement learning",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Microfluidics",
+   "courses": [
+    "MECH311",
+    "MECH402"
+   ],
+   "reasons": {
+    "MECH311": "유체역학",
+    "MECH402": "마이크로 스케일"
+   }
+  },
+  {
+   "name": "EMG",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "C. elegans models",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Zebrafish models",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Drosophila models",
+   "courses": [],
+   "reasons": {}
+  },
+  {
+   "name": "Bioinformatics",
+   "courses": [
+    "LS303b"
+   ],
+   "reasons": {
+    "LS303b": "정량·계산 생명과학"
+   }
+  },
+  {
+   "name": "Python",
+   "courses": [
+    "BE101a",
+    "BE202"
+   ],
+   "reasons": {
+    "BE101a": "프로그래밍 기초(언어 미확인)",
+    "BE202": "데이터사이언스(언어 미확인)"
+   }
+  },
+  {
+   "name": "C++",
+   "courses": [
+    "CSE201"
+   ],
+   "reasons": {
+    "CSE201": "객체지향 프로그래밍(언어 미확인)"
+   }
+  },
+  {
+   "name": "fMRI",
+   "courses": [],
+   "reasons": {}
+  }
+ ]
+}
