@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import clsx from "clsx";
-import { BookOpen, CalendarDays, Compass, Contact, GitCommitVertical, NotebookPen } from "lucide-react";
+import { BookOpen, CalendarDays, Compass, Contact, GitCommitVertical, NotebookPen, Users } from "lucide-react";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { useLang } from "@/components/Providers";
 import { DiaryTab } from "./DiaryTab";
@@ -11,13 +11,15 @@ import { TimelineTab } from "./TimelineTab";
 import { CalendarTab } from "./CalendarTab";
 import { CoursesTab } from "./CoursesTab";
 import { NamecardTab } from "@/components/namecard/NamecardTab";
+import { ContactsTab } from "@/components/contacts/ContactsTab";
 
 const TABS = [
   { id: "diary", en: "Diary", ko: "다이어리", icon: NotebookPen },
   { id: "calendar", en: "Calendar", ko: "캘린더", icon: CalendarDays },
   { id: "timeline", en: "Timeline", ko: "타임라인", icon: GitCommitVertical },
   { id: "courses", en: "Courses & LMS", ko: "수업 & LMS", icon: BookOpen },
-  { id: "namecard", en: "Namecard", ko: "명함", icon: Contact },
+  { id: "namecard", en: "My namecard", ko: "내 명함", icon: Contact },
+  { id: "contacts", en: "Received cards", ko: "받은 명함", icon: Users },
   { id: "export", en: "CV Guide", ko: "CV 가이드", icon: Compass },
 ] as const;
 
@@ -57,6 +59,7 @@ export function CVHub() {
       {tab === "calendar" && <CalendarTab />}
       {tab === "courses" && <CoursesTab />}
       {tab === "namecard" && <NamecardTab />}
+      {tab === "contacts" && <ContactsTab />}
       {tab === "export" && <CVExportTab />}
     </div>
   );
