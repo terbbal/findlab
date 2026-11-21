@@ -6,6 +6,7 @@ import { getLab } from "@/lib/labs";
 import { rateLimit } from "@/lib/ratelimit";
 import { readiness } from "@/lib/readiness";
 import { rank } from "@/lib/tfidf";
+import { expandKo, glossaryHits, koFor } from "@/lib/glossary";
 import type { Lab, Lang } from "@/lib/types";
 
 const Entry = z.object({ id: z.string(), date: z.string(), category: z.string(), skills: z.array(z.string()), rawNote: z.string() }).passthrough();
@@ -77,6 +78,7 @@ export async function POST(req: Request) {
   });
 
   const ranked = rank(profileText, { department: body.department, limit: body.labId ? 400 : 15 });
+  const studentTerms = glossaryHits(profileText);
   const enrich = (lab: Lab, extra: { fitScore: number; whyItFits: string[]; citedEntryIds: string[] }) => ({
     ...extra,
     lab: {
@@ -101,14 +103,28 @@ Interests: ${body.interests.join(", ") || "—"}
 ${body.mode === "interests" ? `Says: ${body.text}` : body.mode === "cv" ? `CV text (written by the student; cite specific items from it):\n${(body.cvText ?? "").slice(0, 6000)}` : `Skills: ${userSkills.join(", ")}\nEntries:\n${entries.slice(0, 25).map((e) => `- [${e.id}] (${e.category}) ${e.rawNote}`).join("\n")}`}`;
 
   const fallbackWhy = (r: (typeof ranked)[number]) => {
-    // only terms that appear in the lab's own interests/keywords (avoids noise like "made", "weather")
-    const vocab = [...r.lab.researchInterests, ...(r.lab.keywords ?? []), ...r.lab.recentPapers.flatMap((p) => p.keywords ?? [])].join(" ").toLowerCase();
-    const terms = r.shared.filter((t) => t.length > 2 && vocab.includes(t)).slice(0, 3);
-    const cited = entries.filter((e) => terms.some((t) => `${e.rawNote} ${e.skills.join(" ")}`.toLowerCase().includes(t))).slice(0, 2);
+    // only terms that appear in the lab's own name/interests/keywords (avoids noise like "made", "weather")
+    const vocab = expandKo(
+      [r.lab.labName ?? "", ...r.lab.researchInterests, ...(r.lab.keywords ?? []), ...r.lab.recentPapers.flatMap((p) => p.keywords ?? [])].join(" "),
+    ).toLowerCase();
+    // A Korean word and its English equivalent are one reason, not two ("배터리, battery" → "battery(배터리)").
+    const glossed = new Set(studentTerms.flatMap((h) => h.en.split(/\s+/).map((w) => w.replace(/s$/, ""))));
+    const terms = r.shared
+      .filter((t) => (t.length > 2 || t === "ai") && vocab.includes(t))
+      .filter((t) => !(/[가-힣]/.test(t) && studentTerms.some((h) => t.includes(h.ko) && h.en.split(/\s+/).some((w) => r.shared.includes(w.replace(/s$/, ""))))))
+      .filter((t, i, all) => !(glossed.has(t) && all.slice(0, i).some((x) => koFor(x, studentTerms) === koFor(t, studentTerms))))
+      .slice(0, 3);
+    // Korean notes match through the glossary, so compare with their English expansion too.
+    const cited = entries.filter((e) => terms.some((t) => expandKo(`${e.rawNote} ${e.skills.join(" ")}`).toLowerCase().includes(t))).slice(0, 2);
+    // Show the student's own Korean word next to the English one: "protein(단백질)".
+    const label = (t: string) => {
+      const ko = koFor(t, studentTerms);
+      return ko ? `${t}(${ko})` : t;
+    };
     const why = terms.length
       ? [
           body.lang === "ko"
-            ? `공통 키워드: ${terms.join(", ")} — 이 연구실의 연구 분야(${r.lab.researchInterests.slice(0, 2).join(", ")})와 겹쳐요.`
+            ? `공통 키워드: ${terms.map(label).join(", ")} — 이 연구실의 연구 분야(${r.lab.researchInterests.slice(0, 2).join(", ")})와 겹쳐요.`
             : `Shared keywords: ${terms.join(", ")} — overlaps with their work on ${r.lab.researchInterests.slice(0, 2).join(", ")}.`,
           ...cited.map((e) => (body.lang === "ko" ? `내 기록 "${e.rawNote.slice(0, 60)}"과 관련이 있어요.` : `Related to your entry “${e.rawNote.slice(0, 60)}”.`)),
         ]

@@ -1,13 +1,15 @@
 import "server-only";
 import { allLabs, isMatchable } from "./labs";
+import { expandKo } from "./glossary";
 import type { Lab } from "./types";
 
 const STOP = new Set(
   "a an the and or of in on for to with by from at as is are was were be been this that these those we our their its it into using use used based via than then also can may such both between within new study studies results show shows paper research lab laboratory method methods approach system systems high low data analysis development effect effects 및 의 을 를 이 가 은 는 에 에서 연구".split(" "),
 );
 
+/** Korean research terms also count as their English equivalents ("단백질" → "protein"), on both sides. */
 export function tokenize(text: string): string[] {
-  return (text.toLowerCase().match(/[a-z][a-z0-9+#-]{1,}|[가-힣]{2,}/g) ?? [])
+  return (expandKo(text).toLowerCase().match(/[a-z][a-z0-9+#-]{1,}|[가-힣]{2,}/g) ?? [])
     .map((t) => t.replace(/(ies)$/, "y").replace(/([^s])s$/, "$1"))
     .filter((t) => !STOP.has(t) && t.length > 1);
 }
