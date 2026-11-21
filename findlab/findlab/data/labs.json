@@ -1,0 +1,383 @@
+[
+  {
+    "id": "sample-soft-robotics",
+    "name": "Sample Soft Robotics Lab",
+    "professor": "Prof. Hana Seo (sample)",
+    "website": null,
+    "researchAreas": [
+      "Soft robotics",
+      "Wearable robots",
+      "Rehabilitation",
+      "Medical robotics"
+    ],
+    "plainSummary": "They build robots out of soft, bendy materials instead of metal, so the robots can safely touch people. A big focus is wearable robotic gloves and sleeves that help patients recover hand and arm movement after an injury or stroke.",
+    "plainSummaryKo": "금속 대신 말랑말랑한 소재로 로봇을 만들어서, 사람과 안전하게 닿을 수 있게 해요. 특히 부상이나 뇌졸중 후 손과 팔 움직임 회복을 돕는 웨어러블 로봇 장갑과 슬리브를 연구해요.",
+    "recentPapers": [
+      {
+        "title": "A soft pneumatic glove for at-home hand rehabilitation (sample)",
+        "url": null,
+        "year": 2026
+      },
+      {
+        "title": "Embedding stretchable sensors in silicone actuators (sample)",
+        "url": null,
+        "year": 2025
+      },
+      {
+        "title": "Learning grasp assistance from EMG signals (sample)",
+        "url": null,
+        "year": 2025
+      }
+    ],
+    "contacts": [
+      {
+        "name": "Prof. Hana Seo (sample)",
+        "role": "Professor",
+        "email": null
+      },
+      {
+        "name": "Jiwoo Park (sample)",
+        "role": "PhD student",
+        "email": null
+      }
+    ],
+    "recruiting": {
+      "status": "Recruiting",
+      "note": "Sample note: open to undergrad interns for winter break.",
+      "types": [
+        "Undergrad intern",
+        "UGRP"
+      ]
+    },
+    "keywords": [
+      "robot",
+      "robotics",
+      "soft",
+      "wearable",
+      "rehabilitation",
+      "healthcare",
+      "medical",
+      "exoskeleton",
+      "arduino",
+      "sensors",
+      "emg",
+      "signal processing",
+      "actuator",
+      "c++",
+      "prototyping"
+    ],
+    "style": "Both",
+    "isSample": true,
+    "lastUpdated": "2026-11-15"
+  },
+  {
+    "id": "sample-human-ai",
+    "name": "Sample Human-Centered AI Lab",
+    "professor": "Prof. Daniel Lee (sample)",
+    "website": null,
+    "researchAreas": [
+      "Machine learning",
+      "Computer vision",
+      "Human-computer interaction",
+      "Gesture recognition"
+    ],
+    "plainSummary": "They teach computers to understand people from cameras and sensors — for example, recognizing hand gestures or body poses. The goal is to make technology easier to use for everyone, including older adults and people with disabilities.",
+    "plainSummaryKo": "카메라와 센서로 사람을 이해하는 컴퓨터를 가르쳐요 — 예를 들어 손동작이나 몸 자세를 인식하는 거예요. 노인과 장애인을 포함한 모두가 기술을 더 쉽게 쓰도록 만드는 게 목표예요.",
+    "recentPapers": [
+      {
+        "title": "Lightweight hand-gesture recognition on edge devices (sample)",
+        "url": null,
+        "year": 2026
+      },
+      {
+        "title": "Pose estimation for elderly fall detection at home (sample)",
+        "url": null,
+        "year": 2025
+      }
+    ],
+    "contacts": [
+      {
+        "name": "Prof. Daniel Lee (sample)",
+        "role": "Professor",
+        "email": null
+      },
+      {
+        "name": "Seoyeon Choi (sample)",
+        "role": "MS student",
+        "email": null
+      }
+    ],
+    "recruiting": {
+      "status": "Unknown",
+      "note": null,
+      "types": [
+        "Undergrad intern",
+        "Grad student"
+      ]
+    },
+    "keywords": [
+      "ai",
+      "machine learning",
+      "deep learning",
+      "computer vision",
+      "opencv",
+      "pytorch",
+      "python",
+      "gesture",
+      "hci",
+      "accessibility",
+      "elderly",
+      "healthcare",
+      "camera",
+      "data"
+    ],
+    "style": "Computational",
+    "isSample": true,
+    "lastUpdated": "2026-11-15"
+  },
+  {
+    "id": "sample-brain-signals",
+    "name": "Sample Brain Signals Lab",
+    "professor": "Prof. Yuna Kang (sample)",
+    "website": null,
+    "researchAreas": [
+      "Neuroscience",
+      "Brain-computer interfaces",
+      "Biosignal processing"
+    ],
+    "plainSummary": "They record tiny electrical signals from the brain and muscles and use code to figure out what those signals mean. One day this could let people control a computer or a robotic arm just by thinking.",
+    "plainSummaryKo": "뇌와 근육에서 나오는 아주 작은 전기 신호를 기록하고, 코드로 그 의미를 알아내요. 언젠가는 생각만으로 컴퓨터나 로봇 팔을 움직이게 할 수도 있어요.",
+    "recentPapers": [
+      {
+        "title": "Decoding imagined movement from low-cost EEG headsets (sample)",
+        "url": null,
+        "year": 2026
+      },
+      {
+        "title": "Noise-robust filtering for wearable EEG (sample)",
+        "url": null,
+        "year": 2025
+      },
+      {
+        "title": "A brain-controlled robotic arm for daily tasks (sample)",
+        "url": null,
+        "year": 2024
+      }
+    ],
+    "contacts": [
+      {
+        "name": "Prof. Yuna Kang (sample)",
+        "role": "Professor",
+        "email": null
+      },
+      {
+        "name": "Minho Jung (sample)",
+        "role": "Postdoc",
+        "email": null
+      }
+    ],
+    "recruiting": {
+      "status": "Recruiting",
+      "note": "Sample note: UGRP teams welcome.",
+      "types": [
+        "UGRP",
+        "Grad student"
+      ]
+    },
+    "keywords": [
+      "brain",
+      "neuroscience",
+      "eeg",
+      "emg",
+      "bci",
+      "signal processing",
+      "numpy",
+      "python",
+      "machine learning",
+      "healthcare",
+      "robotic arm",
+      "biosignal"
+    ],
+    "style": "Both",
+    "isSample": true,
+    "lastUpdated": "2026-11-15"
+  },
+  {
+    "id": "sample-cell-imaging",
+    "name": "Sample Cell Imaging & Biology Lab",
+    "professor": "Prof. Sora Han (sample)",
+    "website": null,
+    "researchAreas": [
+      "Cell biology",
+      "Microscopy",
+      "Bioimage analysis"
+    ],
+    "plainSummary": "They take high-resolution videos of living cells to see how they move, divide and react to drugs. They also write software that automatically finds and counts cells in huge piles of microscope images.",
+    "plainSummaryKo": "살아 있는 세포가 움직이고, 분열하고, 약에 반응하는 모습을 고해상도 영상으로 찍어요. 수많은 현미경 이미지에서 세포를 자동으로 찾아 세는 소프트웨어도 만들어요.",
+    "recentPapers": [
+      {
+        "title": "Automated cell tracking in time-lapse fluorescence movies (sample)",
+        "url": null,
+        "year": 2026
+      },
+      {
+        "title": "How cancer cells squeeze through tight spaces (sample)",
+        "url": null,
+        "year": 2025
+      }
+    ],
+    "contacts": [
+      {
+        "name": "Prof. Sora Han (sample)",
+        "role": "Professor",
+        "email": null
+      },
+      {
+        "name": "Lab office (sample)",
+        "role": "Lab manager",
+        "email": null
+      }
+    ],
+    "recruiting": {
+      "status": "Not recruiting",
+      "note": "Sample note: full for this semester.",
+      "types": []
+    },
+    "keywords": [
+      "biology",
+      "cell",
+      "microscopy",
+      "imaging",
+      "imagej",
+      "fluorescence",
+      "image analysis",
+      "python",
+      "ai for biology",
+      "life science"
+    ],
+    "style": "Experimental",
+    "isSample": true,
+    "lastUpdated": "2026-11-15"
+  },
+  {
+    "id": "sample-battery-materials",
+    "name": "Sample Battery & Energy Materials Lab",
+    "professor": "Prof. Junho Kim (sample)",
+    "website": null,
+    "researchAreas": [
+      "Batteries",
+      "Energy materials",
+      "Electrochemistry"
+    ],
+    "plainSummary": "They invent new materials to make batteries that charge faster, last longer and are less likely to catch fire. Think better batteries for phones, electric cars and storing solar energy.",
+    "plainSummaryKo": "더 빨리 충전되고, 오래가고, 불이 잘 안 붙는 배터리를 위한 새로운 소재를 개발해요. 휴대폰, 전기차, 태양광 에너지 저장용 배터리를 더 좋게 만드는 연구예요.",
+    "recentPapers": [
+      {
+        "title": "A safer solid electrolyte for lithium-metal batteries (sample)",
+        "url": null,
+        "year": 2026
+      },
+      {
+        "title": "Machine-learning screening of cathode materials (sample)",
+        "url": null,
+        "year": 2025
+      }
+    ],
+    "contacts": [
+      {
+        "name": "Prof. Junho Kim (sample)",
+        "role": "Professor",
+        "email": null
+      }
+    ],
+    "recruiting": {
+      "status": "Recruiting",
+      "note": null,
+      "types": [
+        "Undergrad intern",
+        "UGRP",
+        "Grad student"
+      ]
+    },
+    "keywords": [
+      "battery",
+      "batteries",
+      "energy",
+      "materials",
+      "electrochemistry",
+      "chemistry",
+      "lithium",
+      "solar",
+      "machine learning",
+      "experiment"
+    ],
+    "style": "Experimental",
+    "isSample": true,
+    "lastUpdated": "2026-11-15"
+  },
+  {
+    "id": "sample-green-chemistry",
+    "name": "Sample Green Chemistry Lab",
+    "professor": "Prof. Eunji Lim (sample)",
+    "website": null,
+    "researchAreas": [
+      "Organic chemistry",
+      "Catalysis",
+      "Sustainable chemistry"
+    ],
+    "plainSummary": "They find cleaner ways to make the chemicals used in medicines and plastics, using less energy and creating less waste. A lot of their work is about catalysts — helpers that speed up chemical reactions.",
+    "plainSummaryKo": "약이나 플라스틱에 쓰이는 화학물질을 에너지는 덜 쓰고 폐기물은 덜 나오게 만드는 방법을 찾아요. 화학 반응을 빠르게 도와주는 '촉매' 연구가 핵심이에요.",
+    "recentPapers": [
+      {
+        "title": "Light-driven catalysts for drug building blocks (sample)",
+        "url": null,
+        "year": 2026
+      },
+      {
+        "title": "Recycling plastic waste into useful chemicals (sample)",
+        "url": null,
+        "year": 2025
+      },
+      {
+        "title": "Water as a solvent for greener reactions (sample)",
+        "url": null,
+        "year": 2024
+      }
+    ],
+    "contacts": [
+      {
+        "name": "Prof. Eunji Lim (sample)",
+        "role": "Professor",
+        "email": null
+      },
+      {
+        "name": "Hyunwoo Oh (sample)",
+        "role": "PhD student",
+        "email": null
+      }
+    ],
+    "recruiting": {
+      "status": "Unknown",
+      "note": null,
+      "types": [
+        "Undergrad intern"
+      ]
+    },
+    "keywords": [
+      "chemistry",
+      "organic",
+      "catalysis",
+      "catalyst",
+      "green",
+      "sustainable",
+      "plastic",
+      "medicine",
+      "drug",
+      "experiment",
+      "lab"
+    ],
+    "style": "Experimental",
+    "isSample": true,
+    "lastUpdated": "2026-11-15"
+  }
+]

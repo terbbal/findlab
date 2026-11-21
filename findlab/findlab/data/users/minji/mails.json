@@ -1,0 +1,14 @@
+[
+  {
+    "id": "mail-seed-battery",
+    "labId": "sample-battery-materials",
+    "contactName": "Prof. Junho Kim (sample)",
+    "contactEmail": null,
+    "subject": "Undergraduate internship inquiry — Minji Kim, DGIST",
+    "body": "Dear Professor Kim,\n\nMy name is Minji Kim, a 2nd-year undergraduate at DGIST. I am curious about how machine learning can help find better battery materials, and I would be grateful for a 15-minute meeting to learn whether there might be an opportunity to join your lab as an undergraduate intern.\n\nThank you for your time.\n\nBest regards,\nMinji Kim\nminji@dgist.ac.kr",
+    "language": "en",
+    "status": "sent",
+    "sentAt": "2026-11-12T03:45:09.672Z",
+    "followUpDueAt": "2026-11-19T03:45:09.672Z"
+  }
+]
