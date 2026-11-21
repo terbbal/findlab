@@ -89,7 +89,7 @@ function heuristic(s: Summary, lang: Lang) {
     nudges.push({
       title: ko ? "균형 잡힌 기록이에요 👏" : "Nicely balanced record 👏",
       message: ko ? "연구, 프로젝트, 활동이 고르게 쌓이고 있어요. 이대로 꾸준히!" : "Research, projects and activities are all growing. Keep it up!",
-      suggestedAction: ko ? "CV 내보내기" : "Export CV",
+      suggestedAction: ko ? "CV 가이드 보기" : "Open CV guide",
       relatedOpportunityId: null,
     });
   return { nudges: nudges.slice(0, 3) };

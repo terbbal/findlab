@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import clsx from "clsx";
-import { BookOpen, CalendarDays, Contact, FileDown, GitCommitVertical, NotebookPen } from "lucide-react";
+import { BookOpen, CalendarDays, Compass, Contact, GitCommitVertical, NotebookPen } from "lucide-react";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { useLang } from "@/components/Providers";
 import { DiaryTab } from "./DiaryTab";
@@ -18,7 +18,7 @@ const TABS = [
   { id: "timeline", en: "Timeline", ko: "타임라인", icon: GitCommitVertical },
   { id: "courses", en: "Courses & LMS", ko: "수업 & LMS", icon: BookOpen },
   { id: "namecard", en: "Namecard", ko: "명함", icon: Contact },
-  { id: "export", en: "CV Export", ko: "CV 내보내기", icon: FileDown },
+  { id: "export", en: "CV Guide", ko: "CV 가이드", icon: Compass },
 ] as const;
 
 export type CVTab = (typeof TABS)[number]["id"];

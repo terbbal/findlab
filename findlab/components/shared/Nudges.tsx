@@ -49,7 +49,7 @@ export function useNudges(entryCount: number | null) {
 
 function actionHref(n: Nudge) {
   if (/lab|연구실/i.test(n.suggestedAction)) return "/labs";
-  if (/cv|export|내보내/i.test(n.suggestedAction)) return "/cv?tab=export";
+  if (/cv|export|guide|가이드|내보내/i.test(n.suggestedAction)) return "/cv?tab=export";
   if (/log|entry|기록/i.test(n.suggestedAction)) return "/cv?tab=diary";
   if (n.relatedOpportunityId) return "/cv?tab=timeline#deadlines";
   return "/labs";

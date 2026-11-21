@@ -5,7 +5,7 @@ const dict = {
   "step.cv": { ko: "Making CV", en: "Making CV" },
   "step.lab": { ko: "Finding Lab", en: "Finding Lab" },
   "step.mail": { ko: "Suggest Mail", en: "Suggest Mail" },
-  "step.cv.sub": { ko: "활동 기록 → CV", en: "Diary → CV" },
+  "step.cv.sub": { ko: "활동 아카이빙 · CV 작성 가이드", en: "Archive · CV writing guide" },
   "step.lab.sub": { ko: "나에게 맞는 연구실", en: "Labs that fit you" },
   "step.mail.sub": { ko: "교수님께 메일", en: "Email the lab" },
   "nav.settings": { ko: "설정", en: "Settings" },
@@ -34,8 +34,8 @@ const dict = {
   "home.hi": { ko: "안녕하세요, {name} 님 👋", en: "Hi {name} 👋" },
   "home.prompt": { ko: "오늘 무엇을 했나요?", en: "What did you do today?" },
   "home.promptHint": {
-    ko: "짧게 적어도 괜찮아요. AI가 CV 문장으로 다듬어 드려요.",
-    en: "A quick note is enough — AI turns it into a CV bullet.",
+    ko: "짧게 적어도 괜찮아요. 차곡차곡 모아 두면, CV 쓸 때 무엇을 어떻게 쓸지 안내해 드려요.",
+    en: "A quick note is enough — keep the record, and we'll guide you when you write your CV.",
   },
 
   "diary.placeholder": {
@@ -44,13 +44,13 @@ const dict = {
   },
   "diary.empty": { ko: "아직 기록이 없어요 — 오늘 한 일을 말해 주세요 🎙", en: "No entries yet — tell me what you did today 🎙" },
   "diary.original": { ko: "원래 메모", en: "Original note" },
-  "diary.bullet": { ko: "AI CV 문장", en: "AI CV bullet" },
+  "diary.bullet": { ko: "내 CV 문장", en: "My CV line" },
   "diary.voice": { ko: "음성 입력", en: "Voice input" },
   "diary.voiceUnsupported": {
     ko: "이 브라우저는 음성 입력을 지원하지 않아요 (Chrome 권장).",
     en: "Voice input isn't supported in this browser (try Chrome).",
   },
-  "diary.saveAI": { ko: "저장하고 AI로 다듬기", en: "Save & polish with AI" },
+  "diary.saveAI": { ko: "기록 저장하기", en: "Save to my archive" },
 } satisfies Record<string, Record<Lang, string>>;
 
 export type I18nKey = keyof typeof dict;

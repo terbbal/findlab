@@ -56,7 +56,7 @@ export default function Dashboard() {
             <Search className="h-4 w-4" /> {L("Find my lab", "내 연구실 찾기")} <ArrowRight className="h-4 w-4" />
           </Link>
           <Link href="/cv?tab=export" className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-cv hover:bg-cv-tint">
-            <FileDown className="h-4 w-4" /> {L("Export CV", "CV 내보내기")}
+            <FileDown className="h-4 w-4" /> {L("CV guide", "CV 작성 가이드")}
           </Link>
         </div>
       </div>
