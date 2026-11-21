@@ -8,6 +8,7 @@ import { CategoryChip, Chip } from "@/components/ui";
 import { deleteEntry, updateEntry } from "@/lib/localdb";
 import { ELEMENTS, ELEMENT_LABEL, checkElements, entryGuide, ownSentence } from "@/lib/cvguide";
 import type { DiaryEntry } from "@/lib/types";
+import { InlineConfirm } from "@/components/shared/InlineConfirm";
 
 const SOURCE_ICON = { text: Type, voice: Mic, course: BookOpen, lms: Laptop };
 
@@ -44,8 +45,25 @@ export function EntryCard({ entry, isNew }: { entry: DiaryEntry; isNew?: boolean
     setEditing(true);
   };
 
+  // Editing the original note (the archive record itself).
+  const [editingNote, setEditingNote] = useState(false);
+  const [noteDraft, setNoteDraft] = useState(entry.rawNote);
+  const startEditingNote = () => {
+    setNoteDraft(entry.rawNote);
+    setEditingNote(true);
+  };
+  const saveNote = () => {
+    const note = noteDraft.trim();
+    if (!note) return;
+    // A new record's cvBullet is just a copy of the note ("not written yet"); keep that copy in sync
+    // so editing the note doesn't make it look like the student wrote a CV line.
+    const bulletWasNote = !entry.cvBulletEdited && entry.cvBullet.trim() === entry.rawNote.trim();
+    updateEntry(entry.id, { rawNote: note, ...(bulletWasNote ? { cvBullet: note } : {}) });
+    setEditingNote(false);
+    toast(t("common.saved"));
+  };
+
   const remove = () => {
-    if (!confirm(lang === "ko" ? "이 기록을 삭제할까요?" : "Delete this entry?")) return;
     deleteEntry(entry.id);
     toast(lang === "ko" ? "삭제했어요" : "Deleted");
   };
@@ -75,32 +93,68 @@ export function EntryCard({ entry, isNew }: { entry: DiaryEntry; isNew?: boolean
             <Star className="h-4 w-4" fill={entry.highlight ? "currentColor" : "none"} />
           </button>
           <button
-            onClick={startEditing}
+            onClick={startEditingNote}
             className="rounded-lg p-1.5 text-slate-400 transition hover:bg-slate-100 hover:text-navy"
-            aria-label={t("common.edit")}
-            title={t("common.edit")}
+            aria-label={L("Edit note", "메모 수정")}
+            title={L("Edit note", "메모 수정")}
           >
             <Pencil className="h-4 w-4" />
           </button>
-          <button
-            onClick={remove}
-            className="rounded-lg p-1.5 text-slate-400 transition hover:bg-red-50 hover:text-red-600"
-            aria-label={t("common.delete")}
-            title={t("common.delete")}
+          <InlineConfirm
+            question={L("Delete this entry?", "이 기록을 삭제할까요?")}
+            onConfirm={remove}
+            triggerClassName="rounded-lg p-1.5 text-slate-400 transition hover:bg-red-50 hover:text-red-600"
+            triggerLabel={t("common.delete")}
           >
             <Trash2 className="h-4 w-4" />
-          </button>
+          </InlineConfirm>
         </div>
       </div>
 
       <div className="grid gap-3 md:grid-cols-2">
         <div className="rounded-xl bg-slate-50 p-3">
-          <div className="mb-1 text-[11px] font-bold uppercase tracking-wide text-slate-400">{t("diary.original")}</div>
-          <p className="text-sm leading-relaxed text-slate-600">{entry.rawNote}</p>
+          <div className="mb-1 flex items-center text-[11px] font-bold uppercase tracking-wide text-slate-400">
+            {t("diary.original")}
+            {!editingNote && (
+              <button onClick={startEditingNote} className="ml-auto font-semibold normal-case text-slate-500 hover:text-navy hover:underline">
+                {t("common.edit")}
+              </button>
+            )}
+          </div>
+          {editingNote ? (
+            <div className="space-y-2">
+              <textarea
+                className="input text-sm"
+                rows={3}
+                value={noteDraft}
+                onChange={(e) => setNoteDraft(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) saveNote();
+                  if (e.key === "Escape") setEditingNote(false);
+                }}
+                autoFocus
+              />
+              <div className="flex justify-end gap-1">
+                <button onClick={() => setEditingNote(false)} className="rounded-lg p-1.5 text-slate-500 hover:bg-white" aria-label={t("common.cancel")}>
+                  <X className="h-4 w-4" />
+                </button>
+                <button onClick={saveNote} disabled={!noteDraft.trim()} className="rounded-lg bg-navy p-1.5 text-white disabled:opacity-50" aria-label={t("common.save")}>
+                  <Check className="h-4 w-4" />
+                </button>
+              </div>
+            </div>
+          ) : (
+            <p className="text-sm leading-relaxed text-slate-600">{entry.rawNote}</p>
+          )}
         </div>
         <div className="rounded-xl bg-cv-tint p-3">
           <div className="mb-1.5 flex items-center gap-1 text-[11px] font-bold uppercase tracking-wide text-cv">
             ✍️ {L("CV line (your words)", "CV 문장 (내가 쓴 글)")}
+            {own && !editing && (
+              <button onClick={startEditing} className="ml-auto font-semibold normal-case text-cv hover:underline">
+                {t("common.edit")}
+              </button>
+            )}
             {!own && !editing && (
               <span className="ml-auto rounded-full bg-white px-2 py-0.5 text-[10px] font-semibold normal-case text-amber-600">{L("Not written yet", "아직 안 썼어요")}</span>
             )}

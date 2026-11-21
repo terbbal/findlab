@@ -7,6 +7,7 @@ import matter from "gray-matter";
 import { Download, FlaskConical, Trash2, Upload, UserRound } from "lucide-react";
 import { useLang, useToast } from "@/components/Providers";
 import { Button, Card } from "@/components/ui";
+import { InlineConfirm } from "@/components/shared/InlineConfirm";
 import { addEntry, deleteAllData, setWorkspace, useDB } from "@/lib/localdb";
 import { CATEGORIES, type Category, type DiaryEntry } from "@/lib/types";
 
@@ -97,18 +98,18 @@ export function DataControls() {
         <Button variant="secondary" color="navy" onClick={() => fileRef.current?.click()}>
           <Upload className="h-4 w-4" /> {L("Import .md files", ".md 파일 가져오기")}
         </Button>
-        <Button
-          variant="ghost"
-          color="mail"
-          onClick={() => {
-            if (confirm(L("Delete ALL finD Lab data in this browser? This can't be undone.", "이 브라우저의 finD Lab 데이터를 모두 삭제할까요? 되돌릴 수 없어요."))) {
-              deleteAllData();
-              toast(L("All data deleted", "모든 데이터를 삭제했어요"));
-            }
+        <InlineConfirm
+          question={L("Delete ALL finD Lab data in this browser? This can't be undone.", "이 브라우저의 finD Lab 데이터를 모두 삭제할까요? 되돌릴 수 없어요.")}
+          confirmLabel={L("Delete all", "모두 삭제")}
+          onConfirm={() => {
+            deleteAllData();
+            toast(L("All data deleted", "모든 데이터를 삭제했어요"));
           }}
+          className="text-sm"
+          triggerClassName="inline-flex items-center justify-center gap-1.5 rounded-xl px-4 py-2 text-sm font-semibold text-mail transition hover:bg-slate-100"
         >
           <Trash2 className="h-4 w-4" /> {L("Delete all my data", "내 데이터 모두 삭제")}
-        </Button>
+        </InlineConfirm>
       </div>
     </Card>
   );

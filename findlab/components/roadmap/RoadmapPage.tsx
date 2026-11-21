@@ -14,6 +14,7 @@ import { DEFAULT_COURSE_PLAN, deleteRoadmap, readDB, saveCoursePlan, saveRoadmap
 import { CoursePlanView } from "@/components/roadmap/CoursePlan";
 import { readiness } from "@/lib/readiness";
 import type { Lab, LabIndexItem, Roadmap, RoadmapItem } from "@/lib/types";
+import { InlineConfirm } from "@/components/shared/InlineConfirm";
 
 const STATUS: RoadmapItem["status"][] = ["todo", "doing", "done"];
 
@@ -252,15 +253,15 @@ export function RoadmapPage() {
                     <span className="text-sm text-slate-500">
                       {done}/{roadmap.items.length} {L("done", "완료")}
                     </span>
-                    <button
-                      onClick={() => {
-                        if (confirm(L("Delete this roadmap?", "이 로드맵을 삭제할까요?"))) deleteRoadmap(roadmap.labId);
-                      }}
-                      className="ml-auto rounded-lg p-1.5 text-slate-400 hover:bg-red-50 hover:text-red-600"
-                      aria-label="Delete roadmap"
+                    <InlineConfirm
+                      question={L("Delete this roadmap?", "이 로드맵을 삭제할까요?")}
+                      onConfirm={() => deleteRoadmap(roadmap.labId)}
+                      className="ml-auto"
+                      triggerClassName="ml-auto rounded-lg p-1.5 text-slate-400 hover:bg-red-50 hover:text-red-600"
+                      triggerLabel={L("Delete roadmap", "로드맵 삭제")}
                     >
                       <Trash2 className="h-4 w-4" />
-                    </button>
+                    </InlineConfirm>
                   </div>
                   <div className="mb-4 h-2 overflow-hidden rounded-full bg-mail-tint">
                     <div className="h-full rounded-full bg-mail transition-all" style={{ width: `${roadmap.items.length ? (done / roadmap.items.length) * 100 : 0}%` }} />
