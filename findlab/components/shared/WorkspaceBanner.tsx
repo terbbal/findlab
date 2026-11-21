@@ -2,13 +2,15 @@
 
 import { FlaskConical, RotateCcw, UserRound } from "lucide-react";
 import { useLang, useToast } from "@/components/Providers";
-import { resetWorkspace, setWorkspace, useDB } from "@/lib/localdb";
+import { useRouter } from "next/navigation";
+import { readDB, resetWorkspace, setWorkspace, useDB } from "@/lib/localdb";
 
 /** Guest mode switcher: Minji's sample data vs. your own (stored only in this browser). */
 export function WorkspaceBanner() {
   const db = useDB();
   const { lang } = useLang();
   const toast = useToast();
+  const router = useRouter();
   const L = (en: string, ko: string) => (lang === "ko" ? ko : en);
   if (!db) return null;
   if (db.workspace === "demo")
@@ -22,7 +24,8 @@ export function WorkspaceBanner() {
         <button
           onClick={() => {
             setWorkspace("me");
-            toast(L("Switched to your own space ✨", "내 공간으로 바꿨어요 ✨"));
+            if (!readDB("me").profile.name) router.push("/welcome");
+            else toast(L("Switched to your own space ✨", "내 공간으로 바꿨어요 ✨"));
           }}
           className="inline-flex items-center gap-1.5 rounded-xl bg-navy px-4 py-2 font-bold text-white"
         >
@@ -38,7 +41,7 @@ export function WorkspaceBanner() {
       <UserRound className="h-4 w-4 text-cv" />
       <span className="flex-1 text-slate-600">
         {L("Your space — saved only in this browser.", "내 공간 — 이 브라우저에만 저장돼요.")}{" "}
-        {!db.profile.name && <a href="/cv?tab=namecard" className="font-semibold text-cv hover:underline">{L("Add your name →", "이름 입력하기 →")}</a>}
+        {!db.profile.name && <a href="/welcome" className="font-semibold text-cv hover:underline">{L("Set up your profile →", "프로필 설정하기 →")}</a>}
       </span>
       <button onClick={() => setWorkspace("demo")} className="text-xs font-semibold text-slate-500 hover:underline">
         {L("View demo (Minji)", "데모 보기 (민지)")}

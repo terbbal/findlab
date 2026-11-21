@@ -52,6 +52,9 @@ export default function AccountPage() {
             <Link href="/" className="inline-flex items-center gap-1.5 rounded-xl bg-navy px-4 py-2 text-sm font-bold text-white">
               {L("Go to my dashboard", "내 대시보드로")}
             </Link>
+            <Link href="/welcome" className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-navy hover:bg-slate-50">
+              {L("Edit my profile", "프로필 수정")}
+            </Link>
             <Button variant="secondary" color="navy" onClick={() => signOut().then(() => toast(L("Signed out", "로그아웃했어요")))}>
               <LogOut className="h-4 w-4" /> {L("Sign out", "로그아웃")}
             </Button>

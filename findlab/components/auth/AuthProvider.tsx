@@ -2,6 +2,7 @@
 
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
+import { useRouter } from "next/navigation";
 import { ALLOWED_DOMAIN, supabase } from "@/lib/supabase";
 import { ME_CHANGED, readDB, replaceMeDB, setWorkspace } from "@/lib/localdb";
 
@@ -31,6 +32,7 @@ export const useAuth = () => {
  */
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const sb = supabase();
+  const router = useRouter();
   const [session, setSession] = useState<Session | null>(null);
   const [sync, setSync] = useState<SyncState>("off");
   const [lastSynced, setLastSynced] = useState<string | null>(null);
@@ -77,8 +79,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         await push(); // first sign-in: upload what's in this browser
       }
       setWorkspace("me");
+      // First sign-in (no profile yet): ask for name, year, interests
+      if (!readDB("me").profile.name) router.push("/welcome");
     })();
-  }, [sb, session, push]);
+  }, [sb, session, push, router]);
 
   // Push local changes (debounced) while signed in.
   useEffect(() => {
