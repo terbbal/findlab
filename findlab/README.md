@@ -45,6 +45,19 @@ The repo has the app inside the `findlab/` folder, so set the **Root Directory**
 
 No database is needed: lab data is static JSON bundled at build time, and each user's diary/roadmap/LMS data stays in their own browser.
 
+## Sign-in (Supabase, optional)
+
+Guests can use everything without an account (data in the browser). To enable **"Sign in with DGIST email"** + cloud sync:
+
+1. Create a project at https://supabase.com (region: Seoul).
+2. **SQL Editor → New query** → paste `supabase/schema.sql` → **Run** (creates `user_data` with row-level security).
+3. **Authentication → URL Configuration**: set **Site URL** to your app URL and add `<app URL>/account` to **Redirect URLs**.
+4. **Project Settings → API**: copy the Project URL + anon key into `.env.local` (or Vercel env vars):
+   `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` (and optionally `NEXT_PUBLIC_ALLOWED_EMAIL_DOMAIN=""` to test with non-DGIST emails).
+5. Restart `npm run dev`. The avatar (top right) → **Sign in** → email link → your "My data" space syncs to your account.
+
+Note: Supabase's built-in email service sends only a few sign-in emails per hour; for a real launch add your own SMTP in Supabase → Authentication → Emails.
+
 ## Storage, privacy & safety
 
 - **Per-user data, no accounts:** diary, profile, saved labs, roadmaps, LMS items (and the LMS calendar link) live in the user's browser (localStorage). Two workspaces: *My data* and *Demo (Minji)*.

@@ -78,8 +78,17 @@ export function readDB(w: Workspace = getWorkspace()): DB {
   return w === "demo" ? demoDB() : { profile: emptyProfile(), entries: [], savedLabs: [], roadmaps: [], lms: [] };
 }
 
+export const ME_CHANGED = "findlab:me-changed";
+
 export function writeDB(update: (db: DB) => DB, w: Workspace = getWorkspace()) {
   safeSet(key(w), JSON.stringify(update(readDB(w))));
+  window.dispatchEvent(new Event(EVENT));
+  if (w === "me") window.dispatchEvent(new Event(ME_CHANGED)); // cloud sync (when signed in)
+}
+
+/** Replace the "me" workspace with data loaded from the cloud (no sync echo). */
+export function replaceMeDB(data: unknown) {
+  safeSet(key("me"), JSON.stringify(data));
   window.dispatchEvent(new Event(EVENT));
 }
 

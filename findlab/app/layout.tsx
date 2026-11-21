@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
+import { AuthProvider } from "@/components/auth/AuthProvider";
 import { Header } from "@/components/Header";
 import { DailyAlarm } from "@/components/DailyAlarm";
 import { labsMeta } from "@/lib/labs";
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <Providers>
+          <AuthProvider>
           <Header />
           <DailyAlarm />
           <main className="mx-auto max-w-7xl px-4 pb-16 pt-6">{children}</main>
@@ -31,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               Privacy
             </Link>
           </footer>
+          </AuthProvider>
         </Providers>
       </body>
     </html>

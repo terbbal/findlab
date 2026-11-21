@@ -6,6 +6,7 @@ import clsx from "clsx";
 import { ChevronRight, Compass, Library, NotebookPen, Route, Settings } from "lucide-react";
 import { UserRound } from "lucide-react";
 import { Logo } from "./Logo";
+import { useAuth } from "./auth/AuthProvider";
 import { useLang } from "./Providers";
 
 const STEPS = [
@@ -18,6 +19,7 @@ const STEPS = [
 export function Header() {
   const pathname = usePathname();
   const { lang, setLang, t } = useLang();
+  const { session, email } = useAuth();
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-cream/85 backdrop-blur print:hidden">
@@ -74,11 +76,13 @@ export function Header() {
             <Settings className="h-4 w-4" />
           </Link>
           <Link
-            href="/cv?tab=namecard"
-            className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-dgist to-lab text-sm font-bold text-white shadow-soft"
-            aria-label="Minji"
+            href="/account"
+            title={session ? email ?? "" : lang === "ko" ? "로그인" : "Sign in"}
+            className="relative grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-dgist to-lab text-sm font-bold text-white shadow-soft"
+            aria-label={session ? "Account" : "Sign in"}
           >
-            <UserRound className="h-4 w-4" />
+            {session ? email?.[0]?.toUpperCase() : <UserRound className="h-4 w-4" />}
+            {session && <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full border-2 border-cream bg-lab" />}
           </Link>
         </div>
       </div>

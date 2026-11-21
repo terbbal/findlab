@@ -15,6 +15,14 @@ export default function PrivacyPage() {
         </p>
       </section>
       <section>
+        <h2 className="mb-1 font-bold">If you sign in (optional)</h2>
+        <p>
+          Signing in with your @dgist.ac.kr email (magic link, no password) saves a copy of the same data to your account in our Supabase database,
+          so it follows you across devices. Row-level security means only you can read or change your row. You can delete it any time on the Account page.
+          로그인하면 같은 데이터가 내 계정(Supabase)에 저장되고, 본인만 볼 수 있어요.
+        </p>
+      </section>
+      <section>
         <h2 className="mb-1 font-bold">What we never store</h2>
         <p>We never ask for or store passwords (DGIST portal or LMS), and we never log in to or scrape the LMS. 비밀번호는 절대 묻거나 저장하지 않아요.</p>
       </section>
