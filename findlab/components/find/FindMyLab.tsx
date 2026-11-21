@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
-import { ArrowRight, Compass, ExternalLink, Mail, MessageCircleHeart, NotebookPen, Route, Sparkles } from "lucide-react";
+import { ArrowRight, Compass, ExternalLink, FileText, FileUp, Loader2, Mail, MessageCircleHeart, NotebookPen, Route, Sparkles, X } from "lucide-react";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { useLang, useToast } from "@/components/Providers";
 import { Button, Card, Chip, DemoBadge, Skeleton } from "@/components/ui";
@@ -164,7 +164,11 @@ export function FindMyLab() {
   const toast = useToast();
   const L = (en: string, ko: string) => (lang === "ko" ? ko : en);
   const db = useDB();
-  const [mode, setMode] = useState<"diary" | "interests">("diary");
+  const [mode, setMode] = useState<"diary" | "interests" | "cv">("diary");
+  const [cvText, setCvText] = useState("");
+  const [cvFile, setCvFile] = useState<{ name: string; pages: number } | null>(null);
+  const [cvUploading, setCvUploading] = useState(false);
+  const cvInputRef = useRef<HTMLInputElement>(null);
   const [text, setText] = useState("");
   const [department, setDepartment] = useState("");
   const [departments, setDepartments] = useState<string[]>([]);
@@ -185,6 +189,7 @@ export function FindMyLab() {
   const payload = () => ({
     mode,
     text: mode === "interests" ? text : undefined,
+    cvText: mode === "cv" ? cvText : undefined,
     interests: db?.profile.interests ?? [],
     entries: mode === "diary" ? (db?.entries ?? []).map(({ id, date, category, skills, rawNote }) => ({ id, date, category, skills, rawNote })) : [],
     department: department || null,
@@ -217,7 +222,27 @@ export function FindMyLab() {
     }
   };
 
-  const canRun = mode === "diary" ? (db?.entries.length ?? 0) > 0 || (db?.profile.interests.length ?? 0) > 0 : text.trim().length > 1;
+  const uploadCv = async (file: File) => {
+    if (file.type && file.type !== "application/pdf") return toast(L("Please choose a PDF file.", "PDF 파일을 선택해 주세요."), "error");
+    setCvUploading(true);
+    try {
+      const fd = new FormData();
+      fd.append("file", file);
+      const res = await fetch("/api/cv/upload", { method: "POST", body: fd });
+      const d = (await res.json().catch(() => ({}))) as { text?: string; pages?: number; error?: string };
+      if (!res.ok || !d.text) throw new Error(d.error ?? L("Couldn't read this PDF.", "PDF를 읽지 못했어요."));
+      setCvText(d.text);
+      setCvFile({ name: file.name, pages: d.pages ?? 1 });
+    } catch (e) {
+      toast(e instanceof Error ? e.message : "Error", "error");
+    } finally {
+      setCvUploading(false);
+      if (cvInputRef.current) cvInputRef.current.value = "";
+    }
+  };
+
+  const canRun =
+    mode === "diary" ? (db?.entries.length ?? 0) > 0 || (db?.profile.interests.length ?? 0) > 0 : mode === "cv" ? cvText.trim().length > 20 : text.trim().length > 1;
 
   return (
     <div>
@@ -243,10 +268,11 @@ export function FindMyLab() {
       )}
 
       <Card className="mb-6">
-        <div className="mb-4 grid gap-2 sm:grid-cols-2">
+        <div className="mb-4 grid gap-2 sm:grid-cols-3">
           {(
             [
               { id: "diary", icon: NotebookPen, label: L("Use my diary", "내 다이어리 사용") },
+              { id: "cv", icon: FileText, label: L("Use my CV", "내 CV 사용") },
               { id: "interests", icon: MessageCircleHeart, label: L("Tell me your interests", "관심사 말하기") },
             ] as const
           ).map((m) => (
@@ -270,6 +296,52 @@ export function FindMyLab() {
               </Link>
             )}
           </p>
+        ) : mode === "cv" ? (
+          <div className="space-y-2">
+            <input ref={cvInputRef} type="file" accept="application/pdf,.pdf" className="hidden" onChange={(e) => e.target.files?.[0] && uploadCv(e.target.files[0])} />
+            <div
+              onDragOver={(e) => e.preventDefault()}
+              onDrop={(e) => {
+                e.preventDefault();
+                const f = e.dataTransfer.files?.[0];
+                if (f) uploadCv(f);
+              }}
+              className="flex flex-wrap items-center gap-3 rounded-xl border-2 border-dashed border-slate-200 p-4"
+            >
+              {cvFile ? (
+                <div className="flex min-w-0 flex-1 items-center gap-2 text-sm">
+                  <FileText className="h-5 w-5 shrink-0 text-lab" />
+                  <span className="truncate font-semibold">{cvFile.name}</span>
+                  <span className="shrink-0 text-slate-400">· {cvFile.pages}{L(cvFile.pages === 1 ? " page" : " pages", "쪽")}</span>
+                  <button
+                    onClick={() => {
+                      setCvFile(null);
+                      setCvText("");
+                    }}
+                    className="rounded-full p-1 text-slate-400 hover:bg-slate-100 hover:text-navy"
+                    aria-label={L("Remove CV", "CV 지우기")}
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                </div>
+              ) : (
+                <p className="flex-1 text-sm text-slate-500">{L("Drop your CV (PDF) here, or paste its text below.", "CV(PDF)를 여기에 끌어다 놓거나, 아래에 내용을 붙여넣으세요.")}</p>
+              )}
+              <Button variant="secondary" color="lab" onClick={() => cvInputRef.current?.click()} disabled={cvUploading}>
+                {cvUploading ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileUp className="h-4 w-4" />} {cvFile ? L("Replace PDF", "PDF 바꾸기") : L("Upload PDF", "PDF 업로드")}
+              </Button>
+            </div>
+            <textarea
+              className="input font-mono text-xs"
+              rows={6}
+              value={cvText}
+              onChange={(e) => setCvText(e.target.value.slice(0, 12000))}
+              placeholder={L("…or paste your CV text here. You can also edit the extracted text.", "…또는 CV 내용을 여기에 붙여넣으세요. 추출된 내용도 직접 고칠 수 있어요.")}
+            />
+            <p className="text-xs text-slate-400">
+              {L("Your PDF is read in memory only and never saved. The text stays in this page until you leave.", "PDF는 메모리에서만 읽고 저장하지 않아요. 내용은 이 페이지를 떠나면 사라져요.")} {cvText.length.toLocaleString()}/12,000
+            </p>
+          </div>
         ) : (
           <div className="space-y-2">
             <textarea className="input" rows={2} value={text} onChange={(e) => setText(e.target.value)} placeholder={L("What are you curious about?", "어떤 것에 관심이 있나요?")} />

@@ -10,8 +10,9 @@ import type { Lab, Lang } from "@/lib/types";
 
 const Entry = z.object({ id: z.string(), date: z.string(), category: z.string(), skills: z.array(z.string()), rawNote: z.string() }).passthrough();
 const Body = z.object({
-  mode: z.enum(["diary", "interests"]),
+  mode: z.enum(["diary", "interests", "cv"]),
   text: z.string().max(3000).optional(),
+  cvText: z.string().max(12000).optional(),
   interests: z.array(z.string()).max(20).default([]),
   entries: z.array(Entry).max(500).default([]),
   department: z.string().nullable().optional(),
@@ -60,8 +61,20 @@ export async function POST(req: Request) {
   const profileText =
     body.mode === "diary"
       ? [...body.interests, ...body.interests, ...userSkills, ...entries.map((e) => `${e.rawNote} ${e.skills.join(" ")}`)].join(" ")
-      : `${body.text ?? ""} ${body.interests.join(" ")}`;
-  if (profileText.trim().length < 3) return jsonError(body.mode === "diary" ? "Add a few diary entries first (or use 'Tell me your interests')." : "Tell us a bit about your interests first.");
+      : body.mode === "cv"
+        ? `${body.cvText ?? ""} ${body.interests.join(" ")}`
+        : `${body.text ?? ""} ${body.interests.join(" ")}`;
+  if (profileText.trim().length < 3)
+    return jsonError(
+      body.mode === "diary" ? "Add a few diary entries first (or use 'Tell me your interests')." : body.mode === "cv" ? "Upload or paste your CV first." : "Tell us a bit about your interests first.",
+    );
+
+  // CV mode: count a lab skill as "have" when it is named in the student's CV text
+  const cvNorm = (body.cvText ?? "").toLowerCase().replace(/[^a-z0-9가-힣+#]/g, "");
+  const cvSkillsFor = (lab: Lab) => (lab.inferredSkills ?? []).map((s) => s.name).filter((n) => {
+    const k = n.toLowerCase().replace(/[^a-z0-9가-힣+#]/g, "");
+    return k.length > 1 && cvNorm.includes(k);
+  });
 
   const ranked = rank(profileText, { department: body.department, limit: body.labId ? 400 : 15 });
   const enrich = (lab: Lab, extra: { fitScore: number; whyItFits: string[]; citedEntryIds: string[] }) => ({
@@ -76,16 +89,16 @@ export async function POST(req: Request) {
       recentPapers: lab.recentPapers.map((p) => ({ title: p.title, year: p.year, url: p.url })),
       recruiting: lab.recruiting,
     },
-    readiness: readiness(lab, userSkills),
+    readiness: readiness(lab, body.mode === "cv" ? cvSkillsFor(lab) : userSkills),
     citedEntries: extra.citedEntryIds
       .map((id) => entries.find((e) => e.id === id))
       .filter(Boolean)
       .map((e) => ({ id: e!.id, date: e!.date, text: e!.rawNote })),
   });
 
-  const studentBlock = `STUDENT (${body.mode === "diary" ? "from their diary" : "free-text interests"})
+  const studentBlock = `STUDENT (${body.mode === "diary" ? "from their diary" : body.mode === "cv" ? "from their own CV" : "free-text interests"})
 Interests: ${body.interests.join(", ") || "—"}
-${body.mode === "interests" ? `Says: ${body.text}` : `Skills: ${userSkills.join(", ")}\nEntries:\n${entries.slice(0, 25).map((e) => `- [${e.id}] (${e.category}) ${e.rawNote}`).join("\n")}`}`;
+${body.mode === "interests" ? `Says: ${body.text}` : body.mode === "cv" ? `CV text (written by the student; cite specific items from it):\n${(body.cvText ?? "").slice(0, 6000)}` : `Skills: ${userSkills.join(", ")}\nEntries:\n${entries.slice(0, 25).map((e) => `- [${e.id}] (${e.category}) ${e.rawNote}`).join("\n")}`}`;
 
   const fallbackWhy = (r: (typeof ranked)[number]) => {
     // only terms that appear in the lab's own interests/keywords (avoids noise like "made", "weather")
