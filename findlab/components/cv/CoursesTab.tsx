@@ -8,6 +8,7 @@ import { addDiaryEntry, api, todayISO, useEntries } from "@/lib/client";
 import { addEntry, useDB } from "@/lib/localdb";
 import { loadSampleLms } from "@/components/lms/lms";
 import Link from "next/link";
+import { MyCourses } from "./MyCourses";
 
 type Course = { code: string; title: string; skills: string[] };
 
@@ -75,40 +76,10 @@ export function CoursesTab() {
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center gap-2 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-800">
-        <SampleBadge text={L("Sample data", "샘플 데이터")} />
-        {L("Courses are sample data. LMS assignments come from your own lms.dgist.ac.kr calendar.", "수업 목록은 샘플이에요. LMS 과제는 내 lms.dgist.ac.kr 캘린더에서 가져와요.")}
+        {L("Your courses come from the DGIST course list; LMS assignments come from your own lms.dgist.ac.kr calendar (Settings → Connect LMS).", "수업은 DGIST 수업 목록에서, LMS 과제는 내 lms.dgist.ac.kr 캘린더에서 가져와요 (설정 → LMS 연결).")}
       </div>
       <div className="grid gap-6 lg:grid-cols-2">
-        <Card className="min-w-0">
-          <div className="mb-3 flex items-center justify-between gap-2">
-            <h2 className="flex items-center gap-2 text-lg font-bold">
-              <BookOpen className="h-5 w-5 text-cv" /> {L("This semester's courses", "이번 학기 수업")}
-            </h2>
-            <Button
-              color="cv"
-              className="py-1.5 text-xs"
-              onClick={() => addAll(courses.map((c) => ({ key: c.code, note: courseNote(c), date: todayISO(), source: "course" as const })))}
-            >
-              {L("Add all", "모두 추가")}
-            </Button>
-          </div>
-          <ul className="divide-y divide-slate-100">
-            {courses.map((c) => (
-              <li key={c.code} className="flex items-center gap-3 py-3">
-                <span className="w-14 shrink-0 rounded-lg bg-cv-tint py-1 text-center text-xs font-bold text-cv">{c.code}</span>
-                <div className="min-w-0 flex-1">
-                  <div className="font-semibold">{c.title}</div>
-                  <div className="mt-1 flex flex-wrap gap-1">
-                    {c.skills.map((s) => (
-                      <Chip key={s}>{s}</Chip>
-                    ))}
-                  </div>
-                </div>
-                <AddBtn k={c.code} note={courseNote(c)} date={todayISO()} source="course" />
-              </li>
-            ))}
-          </ul>
-        </Card>
+        <MyCourses />
         <Card className="min-w-0">
           <div className="mb-3 flex items-center justify-between gap-2">
             <h2 className="flex items-center gap-2 text-lg font-bold">

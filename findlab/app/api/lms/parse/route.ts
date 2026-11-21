@@ -17,11 +17,15 @@ function toItems(data: CalendarResponse): LmsItem[] {
     const e = ev as VEvent;
     const summary = String(typeof e.summary === "object" ? (e.summary as { val?: string }).val ?? "" : e.summary ?? "").trim();
     const cats = (e as unknown as { categories?: string[] }).categories;
-    // Blackboard summaries often look like "HW3 [Intro to Machine Learning]" or "Course: Title"
+    const location = typeof e.location === "string" ? e.location.trim() : "";
+    const desc = typeof e.description === "string" ? e.description.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() : "";
+    // Blackboard summaries can look like "HW3 [Intro to ML]", "Course: Title"; the course may also sit in CATEGORIES, LOCATION or DESCRIPTION
     const bracket = summary.match(/^(.*?)\s*[\[(]([^\])]+)[\])]\s*$/);
     const colon = summary.match(/^([^:]{2,60}):\s*(.+)$/);
-    const course = cats?.[0] ?? (bracket ? bracket[2] : colon ? colon[1] : null);
-    const title = bracket ? bracket[1] : colon && !cats?.[0] ? colon[2] : summary;
+    const descCourse = desc.match(/(?:course|과목|강좌)\s*[:：]\s*([^|\n]{2,80})/i)?.[1];
+    const code = `${summary} ${location} ${desc}`.match(/\b[A-Z]{2,4}\s?\d{3}[A-Z]?\b/)?.[0]?.replace(/\s/, "");
+    const course = cats?.[0] ?? (bracket ? bracket[2] : null) ?? (location && location.length < 80 ? location : null) ?? descCourse ?? (colon ? colon[1] : null) ?? code ?? null;
+    const title = bracket ? bracket[1] : colon && !cats?.[0] && !location ? colon[2] : summary;
     const start = e.start ? new Date(e.start as Date).toISOString() : null;
     const end = e.end ? new Date(e.end as Date).toISOString() : null;
     const url = typeof e.url === "string" ? e.url : (e.url as { val?: string } | undefined)?.val ?? null;
@@ -31,7 +35,7 @@ function toItems(data: CalendarResponse): LmsItem[] {
       course: course?.trim() || null,
       start,
       due: end ?? start,
-      description: typeof e.description === "string" ? e.description.slice(0, 500) : null,
+      description: desc ? desc.slice(0, 500) : null,
       url,
     });
   }
