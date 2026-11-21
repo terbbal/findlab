@@ -1,6 +1,0 @@
-[
-  { "id": "dura", "name": "DURA", "description": "DGIST Undergraduate Research Abroad — spend a term doing research in an overseas lab.", "deadline": "2026-11-26", "link": null, "isSample": true },
-  { "id": "ugrp", "name": "UGRP", "description": "Undergraduate Group Research Program — a team research project with a faculty advisor.", "deadline": "2026-12-03", "link": null, "isSample": true },
-  { "id": "winter-intern", "name": "Undergraduate research intern — winter", "description": "Winter-break undergraduate internship calls from DGIST labs.", "deadline": "2026-12-15", "link": null, "isSample": true },
-  { "id": "fglp", "name": "FGLP", "description": "Future Global Leader Program — overseas training and leadership program.", "deadline": "2026-12-31", "link": null, "isSample": true }
-]

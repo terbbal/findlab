@@ -1,8 +1,0 @@
-[
-  { "id": "lms-1", "title": "Lab 3: Fourier transform of audio signals", "course": "Signals and Systems", "date": "2026-09-26", "description": "Computed FFT of recorded audio clips in Python and identified dominant frequencies." },
-  { "id": "lms-2", "title": "Homework 2: Logistic regression from scratch", "course": "Introduction to Machine Learning", "date": "2026-10-10", "description": "Implemented logistic regression with gradient descent in NumPy and compared with scikit-learn." },
-  { "id": "lms-3", "title": "Lab 5: PWM motor control", "course": "Embedded Systems Lab", "date": "2026-10-17", "description": "Controlled a DC motor speed with PWM on an STM32 board and measured the response." },
-  { "id": "lms-4", "title": "Team project proposal: Smart pill box", "course": "Embedded Systems Lab", "date": "2026-10-31", "description": "Wrote a team proposal for a microcontroller-based pill box that reminds patients to take medicine." },
-  { "id": "lms-5", "title": "Lab report: Mitosis observation", "course": "General Biology II", "date": "2026-11-05", "description": "Observed onion root tip cells under a microscope and identified stages of mitosis." },
-  { "id": "lms-6", "title": "Poster: My research interest", "course": "Scientific Writing and Presentation", "date": "2026-11-14", "description": "Designed and presented a one-page poster about wearable rehabilitation robots." }
-]

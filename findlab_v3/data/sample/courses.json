@@ -1,7 +1,0 @@
-[
-  { "code": "SE211", "title": "Signals and Systems", "skills": ["Signal processing", "MATLAB", "NumPy"] },
-  { "code": "SE231", "title": "Introduction to Machine Learning", "skills": ["Machine learning", "Python", "scikit-learn"] },
-  { "code": "SE221", "title": "Embedded Systems Lab", "skills": ["C", "Microcontrollers", "Circuits"] },
-  { "code": "SE241", "title": "General Biology II", "skills": ["Cell biology", "Lab techniques"] },
-  { "code": "HL201", "title": "Scientific Writing and Presentation", "skills": ["Scientific writing", "Presentation"] }
-]

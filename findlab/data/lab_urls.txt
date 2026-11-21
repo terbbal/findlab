@@ -1,9 +1,0 @@
-# One DGIST lab homepage URL per line. Lines starting with # are ignored.
-# Run:  npm run crawl            (merges into data/labs.json, keeps sample labs)
-#       npm run crawl -- --replace   (drops the sample labs)
-#
-# https://example-lab-1.dgist.ac.kr/     <- replace with a real DGIST lab homepage
-# https://example-lab-2.dgist.ac.kr/
-# https://example-lab-3.dgist.ac.kr/
-# https://example-lab-4.dgist.ac.kr/
-# https://example-lab-5.dgist.ac.kr/
