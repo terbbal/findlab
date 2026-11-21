@@ -1,0 +1,33 @@
+{
+  "source": "DGIST Scholar (scholar.dgist.ac.kr)",
+  "sourceUrl": "https://scholar.dgist.ac.kr/browse-researcher",
+  "crawledAt": "2026-11-21",
+  "researchers": 263,
+  "withLab": 171,
+  "withPapers": 239,
+  "withAbstracts": 239,
+  "departments": {
+    "Department of Electrical Engineering and Computer Science": 41,
+    "Department of Robotics and Mechatronics Engineering": 29,
+    "Department of Physics and Chemistry": 28,
+    "Department of Energy Science and Engineering": 28,
+    "Department of New Biology": 21,
+    "Department of Brain Sciences": 20,
+    "Division of Energy & Environmental Technology": 17,
+    "Division of Mobility Technology": 14,
+    "Division of AI, Big data and Block chain": 10,
+    "Department of Liberal Arts and Sciences": 9,
+    "AX Research Group for Robotics": 8,
+    "AX Research Group for Semiconductors": 7,
+    "Division of Nanotechnology": 7,
+    "Division of Biomedical Technology": 7,
+    "산업AX혁신본부": 5,
+    "AX Research Group for Biotechnology": 4,
+    "Division of Intelligent Robotics": 3,
+    "Department of Technology and Innovation Management": 2,
+    "Laboratory Animal Resource Center": 1,
+    "Center for Core Research Facilities": 1,
+    "Department of Advanced Technology": 1
+  },
+  "errors": 0
+}
