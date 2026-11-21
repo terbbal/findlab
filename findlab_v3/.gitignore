@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+.env.local
+.env
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+# crawler raw-HTML cache (re-created by npm run crawl)
+scripts/cache/

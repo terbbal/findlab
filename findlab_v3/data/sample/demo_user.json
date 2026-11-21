@@ -1,0 +1,215 @@
+{
+ "profile": {
+  "userId": "minji",
+  "name": "Minji Kim",
+  "nameKo": "김민지",
+  "year": "2nd-year undergraduate",
+  "interests": [
+   "Robotics",
+   "Healthcare",
+   "AI"
+  ],
+  "interestsKo": [
+   "로봇공학",
+   "헬스케어",
+   "인공지능"
+  ],
+  "oneLineIntro": "Hands-on builder who connects robots, code and healthcare — from Arduino gadgets to gesture-recognition ML.",
+  "topSkills": [
+   {
+    "name": "Python",
+    "level": 4
+   },
+   {
+    "name": "Arduino",
+    "level": 3
+   },
+   {
+    "name": "Machine learning",
+    "level": 3
+   },
+   {
+    "name": "Teamwork",
+    "level": 3
+   },
+   {
+    "name": "ROS",
+    "level": 1
+   }
+  ],
+  "bestProjects": [
+   "2026-07-05-hand-gesture-ml",
+   "2026-04-11-arduino-plant-watering",
+   "2026-05-17-robotics-competition"
+  ],
+  "email": "minji@dgist.ac.kr"
+ },
+ "entries": [
+  {
+   "id": "2026-11-08-hackathon-health-app",
+   "date": "2026-11-08",
+   "rawNote": "weekend hackathon with 3 teammates, we made a medication reminder web app prototype in react for elderly people",
+   "source": "voice",
+   "category": "Project",
+   "skills": [
+    "React",
+    "Teamwork",
+    "UX design"
+   ],
+   "cvBullet": "Co-developed a React medication-reminder web app prototype for elderly users with 3 teammates during a weekend hackathon.",
+   "highlight": false
+  },
+  {
+   "id": "2026-10-24-signals-quiz-app",
+   "date": "2026-10-24",
+   "rawNote": "signals and systems assignment: filtered EMG sample data with numpy, removed noise with a band-pass filter",
+   "source": "lms",
+   "category": "Course",
+   "skills": [
+    "Python",
+    "Signal processing",
+    "NumPy"
+   ],
+   "cvBullet": "Filtered sample EMG signals with a NumPy band-pass filter to remove noise in a Signals and Systems assignment.",
+   "highlight": false
+  },
+  {
+   "id": "2026-10-03-club-pr-lead",
+   "date": "2026-10-03",
+   "rawNote": "became PR lead of the robotics club, made the poster and instagram posts for the fall recruiting",
+   "source": "text",
+   "category": "Club",
+   "skills": [
+    "Leadership",
+    "Design",
+    "Communication"
+   ],
+   "cvBullet": "Led PR for the robotics club as PR lead, designing the poster and Instagram posts for fall recruiting.",
+   "highlight": false
+  },
+  {
+   "id": "2026-09-12-medical-robotics-seminar",
+   "date": "2026-09-12",
+   "rawNote": "attended a medical robotics seminar at DGIST about rehabilitation exoskeletons, really interesting",
+   "source": "text",
+   "category": "Other",
+   "skills": [
+    "Medical robotics"
+   ],
+   "cvBullet": "Attended a DGIST seminar on medical robotics focused on rehabilitation exoskeletons.",
+   "highlight": false
+  },
+  {
+   "id": "2026-07-22-ros-online-course",
+   "date": "2026-07-22",
+   "rawNote": "finished an online ROS beginner course during summer break, built turtlesim nodes in ubuntu",
+   "source": "text",
+   "category": "Other",
+   "skills": [
+    "ROS",
+    "Linux"
+   ],
+   "cvBullet": "Completed an online ROS beginner course, building turtlesim nodes on Ubuntu Linux.",
+   "highlight": false
+  },
+  {
+   "id": "2026-07-05-hand-gesture-ml",
+   "date": "2026-07-05",
+   "rawNote": "started ML mini project classifying hand gestures with webcam, using opencv and a small pytorch cnn, 5 gestures",
+   "source": "text",
+   "category": "Project",
+   "skills": [
+    "Python",
+    "Machine learning",
+    "OpenCV",
+    "PyTorch"
+   ],
+   "cvBullet": "Developed a webcam-based classifier for 5 hand gestures using OpenCV and a small PyTorch CNN.",
+   "highlight": true
+  },
+  {
+   "id": "2026-06-07-volunteer-coding-class",
+   "date": "2026-06-07",
+   "rawNote": "volunteer coding class for local middle school students, taught scratch basics to about 15 kids",
+   "source": "text",
+   "category": "Volunteer",
+   "skills": [
+    "Teaching",
+    "Scratch",
+    "Communication"
+   ],
+   "cvBullet": "Taught Scratch programming basics to about 15 local middle-school students as a volunteer instructor.",
+   "highlight": false
+  },
+  {
+   "id": "2026-05-17-robotics-competition",
+   "date": "2026-05-17",
+   "rawNote": "robotics club competition today, our line-following robot got 3rd place out of 12 teams!",
+   "source": "text",
+   "category": "Award",
+   "skills": [
+    "Robotics",
+    "Arduino",
+    "Teamwork"
+   ],
+   "cvBullet": "Won 3rd place out of 12 teams in a robotics club competition with a line-following robot.",
+   "highlight": true
+  },
+  {
+   "id": "2026-04-25-cell-imaging-report",
+   "date": "2026-04-25",
+   "rawNote": "wrote intro to biology lab report on cell imaging, used fluorescence microscope and counted cells in imagej",
+   "source": "course",
+   "category": "Course",
+   "skills": [
+    "Microscopy",
+    "ImageJ",
+    "Scientific writing"
+   ],
+   "cvBullet": "Imaged cells with a fluorescence microscope and quantified cell counts in ImageJ for an Intro to Biology lab report.",
+   "highlight": false
+  },
+  {
+   "id": "2026-04-11-arduino-plant-watering",
+   "date": "2026-04-11",
+   "rawNote": "made a plant watering thing with arduino for club, works with moisture sensor",
+   "source": "voice",
+   "category": "Project",
+   "skills": [
+    "Arduino",
+    "C++",
+    "Sensors"
+   ],
+   "cvBullet": "Built an Arduino-based automatic plant-watering system using a soil-moisture sensor for the robotics club.",
+   "highlight": true
+  },
+  {
+   "id": "2026-03-28-linear-algebra-study",
+   "date": "2026-03-28",
+   "rawNote": "started a linear algebra study group with 5 friends, i organize the weekly meetings and problem sets",
+   "source": "text",
+   "category": "Club",
+   "skills": [
+    "Linear algebra",
+    "Leadership",
+    "Teamwork"
+   ],
+   "cvBullet": "Founded and organized a weekly 6-member linear algebra study group, preparing problem sets for each session.",
+   "highlight": false
+  },
+  {
+   "id": "2026-03-14-python-data-analysis",
+   "date": "2026-03-14",
+   "rawNote": "finished python data analysis assignment for intro to programming, cleaned the daegu weather dataset with pandas and made plots",
+   "source": "lms",
+   "category": "Course",
+   "skills": [
+    "Python",
+    "pandas",
+    "Data visualization"
+   ],
+   "cvBullet": "Cleaned and analyzed a Daegu weather dataset with Python (pandas) and visualized trends for an Intro to Programming assignment.",
+   "highlight": false
+  }
+ ]
+}

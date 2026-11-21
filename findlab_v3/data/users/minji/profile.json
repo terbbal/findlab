@@ -1,0 +1,45 @@
+{
+  "userId": "minji",
+  "name": "Minji Kim",
+  "nameKo": "김민지",
+  "year": "2nd-year undergraduate",
+  "interests": [
+    "Robotics",
+    "Healthcare",
+    "AI"
+  ],
+  "interestsKo": [
+    "로봇공학",
+    "헬스케어",
+    "인공지능"
+  ],
+  "oneLineIntro": "Hands-on builder who connects robots, code and healthcare — from Arduino gadgets to gesture-recognition ML.",
+  "topSkills": [
+    {
+      "name": "Python",
+      "level": 4
+    },
+    {
+      "name": "Arduino",
+      "level": 3
+    },
+    {
+      "name": "Machine learning",
+      "level": 3
+    },
+    {
+      "name": "Teamwork",
+      "level": 3
+    },
+    {
+      "name": "ROS",
+      "level": 1
+    }
+  ],
+  "bestProjects": [
+    "2026-07-05-hand-gesture-ml",
+    "2026-04-11-arduino-plant-watering",
+    "2026-05-17-robotics-competition"
+  ],
+  "email": "minji@dgist.ac.kr"
+}
